@@ -67,15 +67,15 @@
 <div class="wrap">
   <header>
     <h1>AI社員会社 ダッシュボード</h1>
-    <div class="sub">生成: 2026-08-17 00:16 ／ <code>build_dashboard.py</code>（オーナー: AD）</div>
+    <div class="sub">生成: 2026-08-18 10:57 ／ <code>build_dashboard.py</code>（オーナー: AD）</div>
     <div class="ro">閲覧専用。ここでは編集しない。状態の正本は各部門にあり、本画面は view にすぎない。</div>
   </header>
 
   <h2>1 ／ 全社横断</h2>
   <div class="kpis">
-    <div class="kpi"><div class="n">28</div><div class="l">未着手の設計課題（全社）</div></div>
+    <div class="kpi"><div class="n">29</div><div class="l">未着手の設計課題（全社）</div></div>
     <div class="kpi"><div class="n">6 <span style="font-size:1rem;color:var(--muted)">/ 6</span></div><div class="l">課題を抱える部門</div></div>
-    <div class="kpi"><div class="n">7</div><div class="l">進行中の工程（誰か待ち）</div></div>
+    <div class="kpi"><div class="n">6</div><div class="l">進行中の工程（誰か待ち）</div></div>
   </div>
   <div class="cards" style="margin-top:10px">
       <a class="card has" href="#AD">
@@ -88,7 +88,7 @@
       <a class="card has" href="#YFD">
         <div class="role">YFD</div>
         <div class="dept">YouTube事業</div>
-        <div class="num">11</div>
+        <div class="num">12</div>
         <div class="unit">未着手</div>
       </a>
 
@@ -125,7 +125,7 @@
   
       <section class="dept-block">
         <h3>動画2_進捗ボード</h3>
-        <p class="now">公開前サムネライン第1号の通電中。 スカラベ第1投 NO-GO（古代エジプト像寄り）。第2投は同一プロンプト。現行候補 project/thumb_assets/scarab.png（控え scarab_02.png）。仕様: [[2026-08-16_YFD_サムネ第1号通電仕様]]。</p>
+        <p class="now">TD（2026-08-17）。 主役は scarab_02 採用。thumbnailer 5案を別窓起動。完了待ちはしない。</p>
         <div class="scroll"><table>
       <thead><tr><th>工程</th><th>状態</th><th>誰待ち</th><th>いつから</th></tr></thead>
       <tbody>
@@ -135,20 +135,17 @@
       <tr><td>その通り。（scene_037）の抑揚改善</td><td>未着手</td>
           <td class="who">Voice QA</td><td class="since">抑揚の具体適用が実装され次第</td></tr>
 
-      <tr><td>サムネ主役生成（孤立スカラベ）</td><td>第1投NO-GO／第2投目視待ち</td>
-          <td class="who">Shun＋YFD</td><td class="since">2026-08-16</td></tr>
-
-      <tr><td>サムネ背景（pexels_engine 転用・3枚）</td><td>未着手</td>
-          <td class="who">YFD</td><td class="since">主役生成と並行可</td></tr>
+      <tr><td>サムネ主役生成（孤立スカラベ）</td><td>第3投着地・目視待ち</td>
+          <td class="who">Shun＋TD</td><td class="since">thumb_assets/scarab_03.png。1・2投と同じ Cursor 画像生成</td></tr>
 
       <tr><td>最小 thumbnailer（合成＋文字）</td><td>未着手</td>
-          <td class="who">YFD</td><td class="since">素材2点が揃ってから</td></tr>
+          <td class="who">TD</td><td class="since">素材2点が揃ってから</td></tr>
 
-      <tr><td>サムネ目視GO</td><td>未着手</td>
-          <td class="who">Shun</td><td class="since">thumbnail.png 後</td></tr>
+      <tr><td>サムネ目視GO（採択）</td><td>未着手</td>
+          <td class="who">Shun</td><td class="since">TD提示後</td></tr>
 
       <tr><td>公開パッケージ残り（タイトル／説明／エンドカード）</td><td>未着手</td>
-          <td class="who">YFD</td><td class="since">サムネGOと並行可</td></tr></tbody></table></div>
+          <td class="who">YFD</td><td class="since">サムネGOと並行可（TD分担は初期運用後レビュー）</td></tr></tbody></table></div>
         <p class="src">正本: <code>11_YouTube事業/30. 動画別フォルダ/動画2：シンクロニシティ/_制作記録/動画2_進捗ボード.md</code></p>
       </section>
 
@@ -222,7 +219,10 @@
           <td class="who">-</td><td class="since">無料API系1本通電後の判断</td></tr>
 
       <tr><td>辞書更新→反映の自動組み込み</td><td>見送り中</td>
-          <td class="who">-</td><td class="since">手動運用が負担になったら再検討</td></tr></tbody></table></div>
+          <td class="who">-</td><td class="since">手動運用が負担になったら再検討</td></tr>
+
+      <tr><td>thumbnailer（最小合成設備）</td><td>未実装</td>
+          <td class="who">TD</td><td class="since">動画2通電で合成手順が固まったら正式化</td></tr></tbody></table></div>
         <p class="src">正本: <code>11_YouTube事業/20. ゆっくりパイプライン/ゆっくりパイプライン_運用正本.md</code></p>
       </section>
       <section id="KCS" class="dept-block">
