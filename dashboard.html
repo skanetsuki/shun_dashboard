@@ -67,21 +67,21 @@
 <div class="wrap">
   <header>
     <h1>AI社員会社 ダッシュボード</h1>
-    <div class="sub">生成: 2026-08-18 14:10 ／ <code>build_dashboard.py</code>（オーナー: AD）</div>
+    <div class="sub">生成: 2026-08-18 14:24 ／ <code>build_dashboard.py</code>（オーナー: AD）</div>
     <div class="ro">閲覧専用。ここでは編集しない。状態の正本は各部門にあり、本画面は view にすぎない。</div>
   </header>
 
   <h2>1 ／ 全社横断</h2>
   <div class="kpis">
-    <div class="kpi"><div class="n">27</div><div class="l">未着手の設計課題（全社）</div></div>
-    <div class="kpi"><div class="n">6 <span style="font-size:1rem;color:var(--muted)">/ 6</span></div><div class="l">課題を抱える部門</div></div>
+    <div class="kpi"><div class="n">21</div><div class="l">未着手の設計課題（全社）</div></div>
+    <div class="kpi"><div class="n">5 <span style="font-size:1rem;color:var(--muted)">/ 6</span></div><div class="l">課題を抱える部門</div></div>
     <div class="kpi"><div class="n">6</div><div class="l">進行中の工程（誰か待ち）</div></div>
   </div>
   <div class="cards" style="margin-top:10px">
-      <a class="card has" href="#AD">
+      <a class="card" href="#AD">
         <div class="role">AD</div>
         <div class="dept">Architecture Office</div>
-        <div class="num">6</div>
+        <div class="num">0</div>
         <div class="unit">未着手</div>
       </a>
 
@@ -154,27 +154,8 @@
       <section id="AD" class="dept-block">
         <h3><span class="badge">AD</span>Architecture Office
             <small>全社構造設計</small></h3>
-        <div class="scroll"><table>
-      <thead><tr><th>課題</th><th>状態</th><th>誰待ち</th><th>何待ち</th></tr></thead>
-      <tbody>
-      <tr><td>Roleの自律起動経路が存在しない</td><td>保留</td>
-          <td class="who">Shun</td><td class="since">自動起動経路の検討（例: 週次チェックイン実装指示）</td></tr>
-
-      <tr><td>Director SOPへの計画節導入</td><td>保留</td>
-          <td class="who">Shun</td><td class="since">①（自律起動経路）待ち、計画書作成</td></tr>
-
-      <tr><td>PPDの警告権（黄／赤の発令）</td><td>保留</td>
-          <td class="who">Shun</td><td class="since">発令頻度の合意</td></tr>
-
-      <tr><td>AI環境整備フェーズ（ポータブル先行）</td><td>保留</td>
-          <td class="who">Shun</td><td class="since">YouTube動画5本完了</td></tr>
-
-      <tr><td>AI社員会社 Mobile Gateway / 24h PC実行環境</td><td>保留</td>
-          <td class="who">Shun</td><td class="since">Claudeによる外部リサーチ着手指示</td></tr>
-
-      <tr><td>全AI管理職のミッション・設計思想の明文化</td><td>承認・着手予定</td>
-          <td class="who">AD</td><td class="since">Architecture_Directorのミッション改訂に着手</td></tr></tbody></table></div>
-        <p class="src">正本: <code>10_Architecture_Office/AI社員/Architecture_Director_sop.md</code></p>
+        <p class='empty'>未着手の設計課題なし</p>
+        <p class="src">正本: <code>10_Architecture_Office/AI社員/AD_Backlog.md</code></p>
       </section>
       <section id="YFD" class="dept-block">
         <h3><span class="badge">YFD</span>YouTube事業
