@@ -25,8 +25,8 @@
   .ro { display:inline-block; margin-top:10px; padding:5px 10px; border-radius:6px;
     background:color-mix(in srgb, var(--warn) 14%, transparent);
     color:var(--warn); font-size:.76rem; border:1px solid color-mix(in srgb, var(--warn) 30%, transparent); }
-  h2 { font-size:.78rem; text-transform:uppercase; letter-spacing:.14em;
-    color:var(--muted); margin:36px 0 12px; font-weight:600; }
+  h2 { font-size:1.15rem; text-transform:uppercase; letter-spacing:.08em;
+    color:var(--muted); margin:36px 0 12px; font-weight:700; }
   .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; }
   .kpi { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:14px 16px; }
   .kpi .n { font-size:1.9rem; font-weight:700; line-height:1.1; }
@@ -51,8 +51,8 @@
   .items .t { font-weight:600; font-size:.9rem; }
   .items .d { display:block; color:var(--muted); font-size:.8rem; }
   .empty { color:var(--ok); font-size:.84rem; margin:0; }
-  .note, .src { color:var(--muted); font-size:.74rem; margin:6px 0 0; }
-  td.detail { color:var(--muted); }
+  .note { color:var(--muted); font-size:.74rem; margin:6px 0 0; }
+  td.detail { color:var(--ink); }
   .now { font-size:.86rem; margin:0 0 12px;
     padding:9px 12px; border-radius:7px; border-left:3px solid var(--accent);
     background:color-mix(in srgb, var(--accent) 8%, transparent); }
@@ -61,20 +61,20 @@
   th, td { text-align:left; padding:7px 9px; border-bottom:1px solid var(--line); }
   th { color:var(--muted); font-weight:600; font-size:.74rem; }
   td.who { font-weight:600; color:var(--warn); white-space:nowrap; }
-  td.since { color:var(--muted); white-space:nowrap; }
+  td.since { color:var(--ink); white-space:nowrap; }
   code { font-size:.74rem; }
   footer { margin-top:32px; color:var(--muted); font-size:.74rem; }
 </style>
 <div class="wrap">
   <header>
     <h1>AI社員会社 ダッシュボード</h1>
-    <div class="sub">生成: 2026-08-20 18:25 ／ <code>build_dashboard.py</code>（オーナー: AD）</div>
+    <div class="sub">生成: 2026-08-20 22:39 ／ <code>build_dashboard.py</code>（オーナー: AD）</div>
     <div class="ro">閲覧専用。ここでは編集しない。状態の正本は各部門にあり、本画面は view にすぎない。</div>
   </header>
 
   <h2>1 ／ 全社横断</h2>
   <div class="kpis">
-    <div class="kpi"><div class="n">28</div><div class="l">未着手の設計課題（全社）</div></div>
+    <div class="kpi"><div class="n">27</div><div class="l">未着手の設計課題（全社）</div></div>
     <div class="kpi"><div class="n">6 <span style="font-size:1rem;color:var(--muted)">/ 6</span></div><div class="l">課題を抱える部門</div></div>
     <div class="kpi"><div class="n">4</div><div class="l">進行中の工程（誰か待ち）</div></div>
   </div>
@@ -82,7 +82,7 @@
       <a class="card has" href="#AD">
         <div class="role">AD</div>
         <div class="dept">Architecture Office</div>
-        <div class="num">7</div>
+        <div class="num">6</div>
         <div class="unit">未着手</div>
       </a>
 
@@ -135,7 +135,6 @@
 
       <tr><td><span class="badge">KCS</span></td><td>サーモセッターの継続問題</td>
           <td class="detail">日本発の移管プロジェクト（FS 2026上期、移管開始2029年度後半）に伴う、サーモ日本（TSJ）の存続危機への対応。</td></tr></tbody></table></div>
-    <p class="src">正本: 各部門の重点テーマ節（パイロット: <code>40_KEI Business/AI_Staff/KCS_Board.md</code> §1）</p>
   </section>
 
   <h2>3 ／ 部門別バックログ</h2>
@@ -158,15 +157,11 @@
       <tr><td>AI環境整備フェーズ（ポータブル先行）</td><td>保留</td>
           <td class="who">Shun</td><td class="since">YouTube動画5本完了</td></tr>
 
-      <tr><td>AI社員会社 Mobile Gateway / 24h PC実行環境</td><td>保留</td>
-          <td class="who">Shun</td><td class="since">Claudeによる外部リサーチ着手指示</td></tr>
-
       <tr><td>全AI管理職のミッション・設計思想の明文化</td><td>承認・着手予定</td>
           <td class="who">AD</td><td class="since">Architecture_Directorのミッション改訂に着手</td></tr>
 
       <tr><td>AI_Common_SOP と 00_AI_Shared_Context の「参照契約」統一（物理分離のまま）</td><td>保留</td>
           <td class="who">AD</td><td class="since">参照契約文面の採用（必要なら 00_Index_Map への追記）</td></tr></tbody></table></div>
-        <p class="src">正本: <code>10_Architecture_Office/AI社員/AD_Backlog.md</code></p>
       </section>
       <section id="YFD" class="dept-block">
         <h3><span class="badge">YFD</span>YouTube事業
@@ -209,7 +204,6 @@
 
       <tr><td>thumbnailer（最小合成設備）</td><td>未実装</td>
           <td class="who">TD</td><td class="since">動画2通電で合成手順が固まったら正式化</td></tr></tbody></table></div>
-        <p class="src">正本: <code>11_YouTube事業/20. ゆっくりパイプライン/ゆっくりパイプライン_運用正本.md</code></p>
       </section>
       <section id="KCS" class="dept-block">
         <h3><span class="badge">KCS</span>KEI事業
@@ -219,7 +213,6 @@
       <tbody>
       <tr><td>Claude Code SkillへのKEI業務知識の埋め込み</td><td>保留</td>
           <td class="who">Shun</td><td class="since">KCS正本を大きく触る機会（ex. 明示指示）</td></tr></tbody></table></div>
-        <p class="src">正本: <code>40_KEI Business/AI_Staff/KCS_Board.md</code></p>
       </section>
       <section id="INV" class="dept-block">
         <h3><span class="badge">INV</span>投資事業
@@ -235,7 +228,6 @@
 
       <tr><td>Sayang資産承継の資産側Knowledge体系化</td><td>保留</td>
           <td class="who">Shun</td><td class="since">2026-08-16</td></tr></tbody></table></div>
-        <p class="src">正本: <code>50_Investment/AI_Staff/Investment_Director_sop.md</code></p>
       </section>
       <section id="PPD" class="dept-block">
         <h3><span class="badge">PPD</span>Personal Performance
@@ -254,7 +246,6 @@
 
       <tr><td>身体操作・呼吸・発声の統合モデル検証</td><td>登録済み・未着手</td>
           <td class="who">PPD</td><td class="since">低リスク観察・調査の開始</td></tr></tbody></table></div>
-        <p class="src">正本: <code>70_Personal_Performance/AI_Staff/Personal_Performance_Director_sop.md</code></p>
       </section>
       <section id="FD" class="dept-block">
         <h3><span class="badge">FD</span>Family
@@ -264,7 +255,6 @@
       <tbody>
       <tr><td>Sayang向け暗号資産承継AIの実運用環境</td><td>保留</td>
           <td class="who">Shun</td><td class="since">2026-08-16</td></tr></tbody></table></div>
-        <p class="src">正本: <code>80_Family-&amp;-Private/AI_Staff/Family_Director_sop.md</code></p>
       </section>
 
   <h2>4 ／ 個別運用（案件の進捗）</h2>
@@ -286,7 +276,6 @@
 
       <tr><td>公開パッケージ残り（タイトル／説明／エンドカード）</td><td>未着手</td>
           <td class="who">YFD</td><td class="since">サムネGOと並行可（TD分担は初期運用後レビュー）</td></tr></tbody></table></div>
-        <p class="src">正本: <code>11_YouTube事業/30. 動画別フォルダ/動画2：シンクロニシティ/_制作記録/動画2_進捗ボード.md</code></p>
       </section>
 
   <footer>
