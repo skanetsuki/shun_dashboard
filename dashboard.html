@@ -52,6 +52,7 @@
   .items .d { display:block; color:var(--muted); font-size:.8rem; }
   .empty { color:var(--ok); font-size:.84rem; margin:0; }
   .note, .src { color:var(--muted); font-size:.74rem; margin:6px 0 0; }
+  td.detail { color:var(--muted); }
   .now { font-size:.86rem; margin:0 0 12px;
     padding:9px 12px; border-radius:7px; border-left:3px solid var(--accent);
     background:color-mix(in srgb, var(--accent) 8%, transparent); }
@@ -67,7 +68,7 @@
 <div class="wrap">
   <header>
     <h1>AI社員会社 ダッシュボード</h1>
-    <div class="sub">生成: 2026-08-19 20:17 ／ <code>build_dashboard.py</code>（オーナー: AD）</div>
+    <div class="sub">生成: 2026-08-20 18:25 ／ <code>build_dashboard.py</code>（オーナー: AD）</div>
     <div class="ro">閲覧専用。ここでは編集しない。状態の正本は各部門にあり、本画面は view にすぎない。</div>
   </header>
 
@@ -121,27 +122,21 @@
       </a>
   </div>
 
-  <h2>2 ／ 個別運用（案件の進捗）</h2>
-  
-      <section class="dept-block">
-        <h3>動画2_進捗ボード</h3>
-        <p class="now">TD（2026-08-18）。 主役は scarab_02 採用。thumbnailer 5案（A〜E）生成済み。次は自己QA→Shun提示（完了待ちはしない）。</p>
-        <div class="scroll"><table>
-      <thead><tr><th>工程</th><th>状態</th><th>誰待ち</th><th>いつから</th></tr></thead>
+  <h2>2 ／ 重点テーマ</h2>
+  <section class="dept-block">
+    <div class="scroll"><table>
+      <thead><tr><th>部門</th><th>テーマ</th><th>本質</th></tr></thead>
       <tbody>
-      <tr><td>宿題: 閉じ鍵括弧の間の判断基準すり合わせ→SOP昇華</td><td>未着手</td>
-          <td class="who">Shun＋SD</td><td class="since">別途（動画2完了に紐づかない継続課題）</td></tr>
+      <tr><td><span class="badge">KCS</span></td><td>LincstechのPCB既存ビジネスを守る（Yamaha AISS）</td>
+          <td class="detail">9NGA単体の勝敗ではなく、現行量産ビジネスへの価格比較波及リスクの封じ込め。特にエルナーOP（87M／部門OPの37%）の概算75%を占めるAISS（JK-1230系）が本丸。</td></tr>
 
-      <tr><td>その通り。（scene_037）の抑揚改善</td><td>未着手</td>
-          <td class="who">Voice QA</td><td class="since">抑揚の具体適用が実装され次第</td></tr>
+      <tr><td><span class="badge">KCS</span></td><td>Yamaha 2030年モデルを獲得する（ローエンド Mio級）</td>
+          <td class="detail">2つの方向性があり、これらを混ぜずに並走させる。</td></tr>
 
-      <tr><td>サムネ目視GO（採択）</td><td>未着手</td>
-          <td class="who">Shun</td><td class="since">TD提示後</td></tr>
-
-      <tr><td>公開パッケージ残り（タイトル／説明／エンドカード）</td><td>未着手</td>
-          <td class="who">YFD</td><td class="since">サムネGOと並行可（TD分担は初期運用後レビュー）</td></tr></tbody></table></div>
-        <p class="src">正本: <code>11_YouTube事業/30. 動画別フォルダ/動画2：シンクロニシティ/_制作記録/動画2_進捗ボード.md</code></p>
-      </section>
+      <tr><td><span class="badge">KCS</span></td><td>サーモセッターの継続問題</td>
+          <td class="detail">日本発の移管プロジェクト（FS 2026上期、移管開始2029年度後半）に伴う、サーモ日本（TSJ）の存続危機への対応。</td></tr></tbody></table></div>
+    <p class="src">正本: 各部門の重点テーマ節（パイロット: <code>40_KEI Business/AI_Staff/KCS_Board.md</code> §1）</p>
+  </section>
 
   <h2>3 ／ 部門別バックログ</h2>
   
@@ -270,6 +265,28 @@
       <tr><td>Sayang向け暗号資産承継AIの実運用環境</td><td>保留</td>
           <td class="who">Shun</td><td class="since">2026-08-16</td></tr></tbody></table></div>
         <p class="src">正本: <code>80_Family-&amp;-Private/AI_Staff/Family_Director_sop.md</code></p>
+      </section>
+
+  <h2>4 ／ 個別運用（案件の進捗）</h2>
+  
+      <section class="dept-block">
+        <h3>動画2_進捗ボード</h3>
+        <p class="now">TD（2026-08-18）。 主役は scarab_02 採用。thumbnailer 5案（A〜E）生成済み。次は自己QA→Shun提示（完了待ちはしない）。</p>
+        <div class="scroll"><table>
+      <thead><tr><th>工程</th><th>状態</th><th>誰待ち</th><th>いつから</th></tr></thead>
+      <tbody>
+      <tr><td>宿題: 閉じ鍵括弧の間の判断基準すり合わせ→SOP昇華</td><td>未着手</td>
+          <td class="who">Shun＋SD</td><td class="since">別途（動画2完了に紐づかない継続課題）</td></tr>
+
+      <tr><td>その通り。（scene_037）の抑揚改善</td><td>未着手</td>
+          <td class="who">Voice QA</td><td class="since">抑揚の具体適用が実装され次第</td></tr>
+
+      <tr><td>サムネ目視GO（採択）</td><td>未着手</td>
+          <td class="who">Shun</td><td class="since">TD提示後</td></tr>
+
+      <tr><td>公開パッケージ残り（タイトル／説明／エンドカード）</td><td>未着手</td>
+          <td class="who">YFD</td><td class="since">サムネGOと並行可（TD分担は初期運用後レビュー）</td></tr></tbody></table></div>
+        <p class="src">正本: <code>11_YouTube事業/30. 動画別フォルダ/動画2：シンクロニシティ/_制作記録/動画2_進捗ボード.md</code></p>
       </section>
 
   <footer>
