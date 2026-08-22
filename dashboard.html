@@ -75,13 +75,13 @@
 <div class="wrap">
   <header>
     <h1>AI社員会社 ダッシュボード</h1>
-    <div class="sub">生成: 2026-08-22 10:47 ／ <code>build_dashboard.py</code>（オーナー: AOD）</div>
+    <div class="sub">生成: 2026-08-22 19:56 ／ <code>build_dashboard.py</code>（オーナー: AOD）</div>
     <div class="ro">閲覧専用。ここでは編集しない。状態の正本は各部門にあり、本画面は view にすぎない。</div>
   </header>
 
   <h2>1 ／ 全社横断</h2>
   <div class="kpis">
-    <div class="kpi"><div class="n">22</div><div class="l">未着手の設計課題（全社）</div></div>
+    <div class="kpi"><div class="n">24</div><div class="l">未着手の設計課題（全社）</div></div>
     <div class="kpi"><div class="n">5 <span style="font-size:1rem;color:var(--muted)">/ 6</span></div><div class="l">課題を抱える部門</div></div>
     <div class="kpi"><div class="n">4</div><div class="l">進行中の工程（誰か待ち）</div></div>
   </div>
@@ -89,7 +89,7 @@
       <a class="card has" href="#AOD">
         <div class="role" style="color:#2563eb">AOD</div>
         <div class="dept">Architecture Office</div>
-        <div class="num">3</div>
+        <div class="num">5</div>
         <div class="unit">未着手</div>
       </a>
 
@@ -110,14 +110,14 @@
       <a class="card has" href="#IOD">
         <div class="role" style="color:#946200">IOD</div>
         <div class="dept">Investment Office</div>
-        <div class="num">2</div>
+        <div class="num">1</div>
         <div class="unit">未着手</div>
       </a>
 
       <a class="card has" href="#PPD">
         <div class="role" style="color:#6d28d9">PPD</div>
         <div class="dept">Personal Performance</div>
-        <div class="num">4</div>
+        <div class="num">5</div>
         <div class="unit">未着手</div>
       </a>
 
@@ -147,7 +147,19 @@
           <td class="detail">2つの方向性があり、これらを混ぜずに並走させる。</td></tr>
 
       <tr><td><span class="badge" style="background:#c2410c">KCS</span></td><td>サーモセッターの継続問題</td>
-          <td class="detail">日本発の移管プロジェクト（FS 2026上期、移管開始2029年度後半）に伴う、サーモ日本（TSJ）の存続危機への対応。</td></tr></tbody></table></div>
+          <td class="detail">日本発の移管プロジェクト（FS 2026上期、移管開始2029年度後半）に伴う、サーモ日本（TSJ）の存続危機への対応。</td></tr>
+
+      <tr><td><span class="badge" style="background:#946200">IOD</span></td><td>テーマ①：LIM育成と実動開始方法の検討</td>
+          <td class="detail"></td></tr>
+
+      <tr><td><span class="badge" style="background:#946200">IOD</span></td><td>テーマ②：中長期底値判断AIの育成（LIM）</td>
+          <td class="detail"></td></tr>
+
+      <tr><td><span class="badge" style="background:#946200">IOD</span></td><td>テーマ③：FX短期売買AIエージェントの新設（STM）</td>
+          <td class="detail"></td></tr>
+
+      <tr><td><span class="badge" style="background:#be185d">FOD</span></td><td>Yusuke教育：2歳からの体験型教育・英語環境の立ち上げ</td>
+          <td class="detail">長期方針（Yusuke・Hessa教育方針_長期方針 §2第二層）は「2027年Q1、Cikarang周辺プレスクール調査」を想定していたが、Sayangの希望（Yusuke満2歳＝2026-11-04を機に習い事を始めたい）により前倒しする。単発リサーチではなく、Yusukeが3歳になるまでの「家庭保育→体験型教育へ</td></tr></tbody></table></div>
   </section>
 
   <h2>3 ／ 部門別バックログ</h2>
@@ -165,7 +177,13 @@
           <td class="who">Shun</td><td class="since">各AI管理職へのミッション付与</td></tr>
 
       <tr><td>参照契約の短文化</td><td>待機</td>
-          <td class="who">AOD</td><td class="since">Shun の空き時間</td></tr></tbody></table></div>
+          <td class="who">AOD</td><td class="since">Shun の空き時間</td></tr>
+
+      <tr><td>スマホからのPython実行と設備操作（進捗ボードhtml更新等）</td><td>待機</td>
+          <td class="who">Shun</td><td class="since">着手判断（クラウド実行環境経由での検証開始の可否）</td></tr>
+
+      <tr><td>外部記事（画像込み）のナレッジ保管方法の確立</td><td>待機</td>
+          <td class="who">AOD</td><td class="since">次回AOD起動時に着手（Shunさん指示済み）</td></tr></tbody></table></div>
       </section>
       <section id="YFD" class="dept-block">
         <h3><span class="badge" style="background:#b91c1c">YFD</span>YouTube事業
@@ -220,9 +238,6 @@
         <div class="scroll"><table class="board">
       <thead><tr><th>課題</th><th>状態</th><th>誰待ち</th><th>何待ち</th></tr></thead>
       <tbody>
-      <tr><td>LIM / STM の通電</td><td>保留</td>
-          <td class="who">Shun</td><td class="since">Research Question または Risk Budget</td></tr>
-
       <tr><td>Sayang承継の資産側Knowledge</td><td>保留</td>
           <td class="who">Shun</td><td class="since">着手指示（FODと同時起動）</td></tr></tbody></table></div>
       </section>
@@ -242,7 +257,10 @@
           <td class="who">Shun</td><td class="since">関心テーマの表明（睡眠、アンチエイジング等）</td></tr>
 
       <tr><td>身体統合モデルの検証</td><td>登録済み・未着手</td>
-          <td class="who">PPD</td><td class="since">低リスク観察・調査の開始</td></tr></tbody></table></div>
+          <td class="who">PPD</td><td class="since">低リスク観察・調査の開始</td></tr>
+
+      <tr><td>検診計画の策定（過去の健診結果ベース）</td><td>保留</td>
+          <td class="who">Shun</td><td class="since">過去の検診結果ファイルの提供（Vaultが編集可能になり次第、Shunさんから渡される予定）</td></tr></tbody></table></div>
       </section>
       <section id="FOD" class="dept-block">
         <h3><span class="badge" style="background:#be185d">FOD</span>Family Office
