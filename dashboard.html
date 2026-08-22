@@ -68,14 +68,14 @@
 <div class="wrap">
   <header>
     <h1>AI社員会社 ダッシュボード</h1>
-    <div class="sub">生成: 2026-08-22 08:38 ／ <code>build_dashboard.py</code>（オーナー: AOD）</div>
+    <div class="sub">生成: 2026-08-22 08:49 ／ <code>build_dashboard.py</code>（オーナー: AOD）</div>
     <div class="ro">閲覧専用。ここでは編集しない。状態の正本は各部門にあり、本画面は view にすぎない。</div>
   </header>
 
   <h2>1 ／ 全社横断</h2>
   <div class="kpis">
-    <div class="kpi"><div class="n">18</div><div class="l">未着手の設計課題（全社）</div></div>
-    <div class="kpi"><div class="n">4 <span style="font-size:1rem;color:var(--muted)">/ 6</span></div><div class="l">課題を抱える部門</div></div>
+    <div class="kpi"><div class="n">22</div><div class="l">未着手の設計課題（全社）</div></div>
+    <div class="kpi"><div class="n">5 <span style="font-size:1rem;color:var(--muted)">/ 6</span></div><div class="l">課題を抱える部門</div></div>
     <div class="kpi"><div class="n">4</div><div class="l">進行中の工程（誰か待ち）</div></div>
   </div>
   <div class="cards" style="margin-top:10px">
@@ -107,10 +107,10 @@
         <div class="unit">未着手</div>
       </a>
 
-      <a class="card" href="#PPD">
+      <a class="card has" href="#PPD">
         <div class="role" style="color:#6d28d9">PPD</div>
         <div class="dept">Personal Performance</div>
-        <div class="num">0</div>
+        <div class="num">4</div>
         <div class="unit">未着手</div>
       </a>
 
@@ -222,7 +222,20 @@
       <section id="PPD" class="dept-block">
         <h3><span class="badge" style="background:#6d28d9">PPD</span>Personal Performance
             <small>身体・精神・エネルギー</small></h3>
-        <p class='empty'>未着手の設計課題なし</p>
+        <div class="scroll"><table>
+      <thead><tr><th>課題</th><th>状態</th><th>誰待ち</th><th>何待ち</th></tr></thead>
+      <tbody>
+      <tr><td>モニタリング経路が存在しない</td><td>保留</td>
+          <td class="who">Shun＋AOD</td><td class="since">②はAOD結論待ち（自律起動経路）、①は着手可</td></tr>
+
+      <tr><td>生活習慣層・身体資本層の型未定義</td><td>保留</td>
+          <td class="who">Shun</td><td class="since">モニタリング経路の確定</td></tr>
+
+      <tr><td>External Knowledge Stockの受け皿がない</td><td>保留</td>
+          <td class="who">Shun</td><td class="since">関心テーマの表明（ex. 睡眠、アンチエイジング）</td></tr>
+
+      <tr><td>身体操作・呼吸・発声の統合モデル検証</td><td>登録済み・未着手</td>
+          <td class="who">PPD</td><td class="since">低リスク観察・調査の開始</td></tr></tbody></table></div>
       </section>
       <section id="FOD" class="dept-block">
         <h3><span class="badge" style="background:#be185d">FOD</span>Family Office
