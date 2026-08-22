@@ -58,23 +58,24 @@
     background:color-mix(in srgb, var(--accent) 8%, transparent); }
   .scroll { overflow-x:auto; }
   table { border-collapse:collapse; width:100%; font-size:.83rem; min-width:480px; }
-  th, td { text-align:left; padding:7px 9px; border-bottom:1px solid var(--line); word-break:break-word; }
+  th, td { text-align:left; padding:7px 9px; border-bottom:1px solid var(--line); }
   th { color:var(--muted); font-weight:600; font-size:.74rem; }
   td.who { font-weight:600; color:var(--warn); white-space:nowrap; }
-  td.since { color:var(--ink); }
+  td.since { color:var(--ink); white-space:nowrap; }
   table.board { table-layout:fixed; }
+  table.board th, table.board td { word-break:break-word; }
   table.board th:nth-child(1), table.board td:nth-child(1) { width:38%; }
   table.board th:nth-child(2), table.board td:nth-child(2) { width:12%; }
   table.board th:nth-child(3), table.board td:nth-child(3) { width:12%; }
   table.board th:nth-child(4), table.board td:nth-child(4) { width:38%; }
-  table.board td.who { white-space:normal; }
+  table.board td.who, table.board td.since { white-space:normal; }
   code { font-size:.74rem; }
   footer { margin-top:32px; color:var(--muted); font-size:.74rem; }
 </style>
 <div class="wrap">
   <header>
     <h1>AI社員会社 ダッシュボード</h1>
-    <div class="sub">生成: 2026-08-22 09:07 ／ <code>build_dashboard.py</code>（オーナー: AOD）</div>
+    <div class="sub">生成: 2026-08-22 09:16 ／ <code>build_dashboard.py</code>（オーナー: AOD）</div>
     <div class="ro">閲覧専用。ここでは編集しない。状態の正本は各部門にあり、本画面は view にすぎない。</div>
   </header>
 
@@ -219,11 +220,11 @@
         <div class="scroll"><table class="board">
       <thead><tr><th>課題</th><th>状態</th><th>誰待ち</th><th>何待ち</th></tr></thead>
       <tbody>
-      <tr><td>LIM / STM の Draft から Active への通電</td><td>保留</td>
-          <td class="who">Shun</td><td class="since">最初のResearch QuestionまたはRisk Budget設定の指示</td></tr>
+      <tr><td>LIM / STM の通電</td><td>保留</td>
+          <td class="who">Shun</td><td class="since">Research Question または Risk Budget</td></tr>
 
-      <tr><td>Sayang資産承継の資産側Knowledge体系化</td><td>保留</td>
-          <td class="who">Shun</td><td class="since">着手指示。FODと同時起動</td></tr></tbody></table></div>
+      <tr><td>Sayang承継の資産側Knowledge</td><td>保留</td>
+          <td class="who">Shun</td><td class="since">着手指示（FODと同時起動）</td></tr></tbody></table></div>
       </section>
       <section id="PPD" class="dept-block">
         <h3><span class="badge" style="background:#6d28d9">PPD</span>Personal Performance
@@ -231,16 +232,16 @@
         <div class="scroll"><table class="board">
       <thead><tr><th>課題</th><th>状態</th><th>誰待ち</th><th>何待ち</th></tr></thead>
       <tbody>
-      <tr><td>モニタリング経路が存在しない</td><td>保留</td>
-          <td class="who">Shun＋AOD</td><td class="since">②はAOD結論待ち（自律起動経路）、①は着手可</td></tr>
+      <tr><td>モニタリング経路がない</td><td>保留</td>
+          <td class="who">Shun＋AOD</td><td class="since">②はAODの自律起動結論。①は着手可</td></tr>
 
-      <tr><td>生活習慣層・身体資本層の型未定義</td><td>保留</td>
+      <tr><td>生活習慣・身体資本の型がない</td><td>保留</td>
           <td class="who">Shun</td><td class="since">モニタリング経路の確定</td></tr>
 
-      <tr><td>External Knowledge Stockの受け皿がない</td><td>保留</td>
-          <td class="who">Shun</td><td class="since">関心テーマの表明（ex. 睡眠、アンチエイジング）</td></tr>
+      <tr><td>学習Stockの受け皿がない</td><td>保留</td>
+          <td class="who">Shun</td><td class="since">関心テーマの表明（睡眠、アンチエイジング等）</td></tr>
 
-      <tr><td>身体操作・呼吸・発声の統合モデル検証</td><td>登録済み・未着手</td>
+      <tr><td>身体統合モデルの検証</td><td>登録済み・未着手</td>
           <td class="who">PPD</td><td class="since">低リスク観察・調査の開始</td></tr></tbody></table></div>
       </section>
       <section id="FOD" class="dept-block">
@@ -249,8 +250,8 @@
         <div class="scroll"><table class="board">
       <thead><tr><th>課題</th><th>状態</th><th>誰待ち</th><th>何待ち</th></tr></thead>
       <tbody>
-      <tr><td>Sayang向け暗号資産承継AIの実運用環境</td><td>待機</td>
-          <td class="who">Shun</td><td class="since">2026-08-16</td></tr></tbody></table></div>
+      <tr><td>Sayang承継AIの実運用</td><td>待機</td>
+          <td class="who">Shun</td><td class="since">着手指示（即時着手しない）</td></tr></tbody></table></div>
       </section>
 
   <h2>4 ／ 個別運用（案件の進捗）</h2>
