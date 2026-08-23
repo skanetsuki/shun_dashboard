@@ -75,20 +75,20 @@
 <div class="wrap">
   <header>
     <h1>AI社員会社 ダッシュボード</h1>
-    <div class="sub">生成: 2026-08-23 23:52 ／ <code>build_dashboard.py</code>（オーナー: AOD）</div>
+    <div class="sub">生成: 2026-08-24 00:06 ／ <code>build_dashboard.py</code>（オーナー: AOD）</div>
   </header>
 
   <h2>1 ／ 全社横断</h2>
   <div class="kpis">
-    <div class="kpi"><div class="n">26</div><div class="l">未着手の設計課題（全社）</div></div>
-    <div class="kpi"><div class="n">6 <span style="font-size:1rem;color:var(--muted)">/ 7</span></div><div class="l">課題を抱える部門</div></div>
+    <div class="kpi"><div class="n">27</div><div class="l">未着手の設計課題（全社）</div></div>
+    <div class="kpi"><div class="n">7 <span style="font-size:1rem;color:var(--muted)">/ 7</span></div><div class="l">課題を抱える部門</div></div>
     <div class="kpi"><div class="n">4</div><div class="l">進行中の工程（誰か待ち）</div></div>
   </div>
   <div class="cards" style="margin-top:10px">
-      <a class="card" href="#CAO">
+      <a class="card has" href="#CAO">
         <div class="role" style="color:#0f766e">CAO</div>
         <div class="dept">Holding（CAO）</div>
-        <div class="num">0</div>
+        <div class="num">1</div>
         <div class="unit">未着手</div>
       </a>
 
@@ -164,7 +164,11 @@
       <section id="CAO" class="dept-block">
         <h3><span class="badge" style="background:#0f766e">CAO</span>Holding（CAO）
             <small>Executive Deputy</small></h3>
-        <p class='empty'>未着手の設計課題なし</p>
+        <div class="scroll"><table class="board">
+      <thead><tr><th>課題</th><th>状態</th><th>誰待ち</th><th>何待ち</th></tr></thead>
+      <tbody>
+      <tr><td>将来RAGを載せられるKnowledge Architectureの形成</td><td>待機</td>
+          <td class="who">CAO</td><td class="since">Knowledge Ownership と薄いKM契約が先。RAG実装ではなく、本ノートの結論をAODへ渡せるArchitecture要件へ落とすタイミング</td></tr></tbody></table></div>
       </section>
       <section id="AOD" class="dept-block">
         <h3><span class="badge" style="background:#2563eb">AOD</span>Architecture Office
