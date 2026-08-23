@@ -75,20 +75,20 @@
 <div class="wrap">
   <header>
     <h1>AI社員会社 ダッシュボード</h1>
-    <div class="sub">生成: 2026-08-23 13:39 ／ <code>build_dashboard.py</code>（オーナー: AOD）</div>
+    <div class="sub">生成: 2026-08-23 13:41 ／ <code>build_dashboard.py</code>（オーナー: AOD）</div>
   </header>
 
   <h2>1 ／ 全社横断</h2>
   <div class="kpis">
-    <div class="kpi"><div class="n">20</div><div class="l">未着手の設計課題（全社）</div></div>
-    <div class="kpi"><div class="n">4 <span style="font-size:1rem;color:var(--muted)">/ 6</span></div><div class="l">課題を抱える部門</div></div>
+    <div class="kpi"><div class="n">26</div><div class="l">未着手の設計課題（全社）</div></div>
+    <div class="kpi"><div class="n">6 <span style="font-size:1rem;color:var(--muted)">/ 6</span></div><div class="l">課題を抱える部門</div></div>
     <div class="kpi"><div class="n">4</div><div class="l">進行中の工程（誰か待ち）</div></div>
   </div>
   <div class="cards" style="margin-top:10px">
-      <a class="card" href="#AOD">
+      <a class="card has" href="#AOD">
         <div class="role" style="color:#2563eb">AOD</div>
         <div class="dept">Architecture Office</div>
-        <div class="num">0</div>
+        <div class="num">4</div>
         <div class="unit">未着手</div>
       </a>
 
@@ -106,10 +106,10 @@
         <div class="unit">未着手</div>
       </a>
 
-      <a class="card" href="#IOD">
+      <a class="card has" href="#IOD">
         <div class="role" style="color:#946200">IOD</div>
         <div class="dept">Investment Office</div>
-        <div class="num">0</div>
+        <div class="num">2</div>
         <div class="unit">未着手</div>
       </a>
 
@@ -133,6 +133,15 @@
     <div class="scroll"><table>
       <thead><tr><th>部門</th><th>テーマ</th><th>本質</th></tr></thead>
       <tbody>
+      <tr><td><span class="badge" style="background:#2563eb">AOD</span></td><td>全AI管理職のミッション・設計思想の明文化</td>
+          <td class="detail">全AI管理職に「判断の優先順位に直結する旗印」を持たせ、各管理職が主体的に動ける状態をつくること。抽象度の高いMission文言だけでは足りず、PPDでいう「屋台骨」「Shunさんの状態そのものに責任を持つ」のような具体的な設計思想まで落とす。</td></tr>
+
+      <tr><td><span class="badge" style="background:#2563eb">AOD</span></td><td>CAOの育成計画の作成と実施</td>
+          <td class="detail">CAO（構想はCAO構想、§3参照）が将来的に他のAI管理職への指示・支援を担う前に、まず自分自身（CAOとして起動するAI）がShunさんの本質・歴史を理解し、CAO自身のナレッジを育てることを優先する。他AIへの指示・支援は現時点では対象外とする。§3「ホールディング副社長AI（CAO）による執行協働レイヤーの確立</td></tr>
+
+      <tr><td><span class="badge" style="background:#946200">IOD</span></td><td>IOD育成と暗号資産の買い・売り・現金化</td>
+          <td class="detail">IODが先、LIMは後。IODが配下を吸収して育ち、今から買えるか・いつ買うか・どう現金化するか・ガチホでよいかを判断できるようにする。</td></tr>
+
       <tr><td><span class="badge" style="background:#6d28d9">PPD</span></td><td>健診計画の策定（過去の健診結果ベース）</td>
           <td class="detail">定義書 §3.4 身体資本層の実務化。過去の健診結果を起点に、Cikarang近郊での検診計画を策定し、数値の経時管理を始める。</td></tr>
 
@@ -145,7 +154,20 @@
       <section id="AOD" class="dept-block">
         <h3><span class="badge" style="background:#2563eb">AOD</span>Architecture Office
             <small>全社構造設計</small></h3>
-        <p class='empty'>未着手の設計課題なし</p>
+        <div class="scroll"><table class="board">
+      <thead><tr><th>課題</th><th>状態</th><th>誰待ち</th><th>何待ち</th></tr></thead>
+      <tbody>
+      <tr><td>自律起動のリサーチ</td><td>待機</td>
+          <td class="who">Shun</td><td class="since">各AI管理職による中期計画提出</td></tr>
+
+      <tr><td>各管理職の中期計画作成</td><td>待機</td>
+          <td class="who">Shun</td><td class="since">各AI管理職へのミッション付与</td></tr>
+
+      <tr><td>参照契約の短文化</td><td>待機</td>
+          <td class="who">AOD</td><td class="since">Shun の空き時間</td></tr>
+
+      <tr><td>外部記事（画像込み）のナレッジ保管方法の確立</td><td>待機</td>
+          <td class="who">AOD</td><td class="since">次回AOD起動時に着手（Shunさん指示済み）</td></tr></tbody></table></div>
       </section>
       <section id="YFD" class="dept-block">
         <h3><span class="badge" style="background:#b91c1c">YFD</span>YouTube事業
@@ -207,7 +229,14 @@
       <section id="IOD" class="dept-block">
         <h3><span class="badge" style="background:#946200">IOD</span>Investment Office
             <small>資本配分・出口戦略</small></h3>
-        <p class='empty'>未着手の設計課題なし</p>
+        <div class="scroll"><table class="board">
+      <thead><tr><th>課題</th><th>状態</th><th>誰待ち</th><th>何待ち</th></tr></thead>
+      <tbody>
+      <tr><td>Sayang承継の資産側Knowledge</td><td>保留</td>
+          <td class="who">Shun</td><td class="since">着手指示（FODと同時起動）</td></tr>
+
+      <tr><td>FX短期売買AIエージェントの新設（STM）</td><td>保留</td>
+          <td class="who">IOD</td><td class="since">IOD自身の育成が進み、STMへ委任できる状態になること</td></tr></tbody></table></div>
       </section>
       <section id="PPD" class="dept-block">
         <h3><span class="badge" style="background:#6d28d9">PPD</span>Personal Performance
