@@ -75,16 +75,23 @@
 <div class="wrap">
   <header>
     <h1>AI社員会社 ダッシュボード</h1>
-    <div class="sub">生成: 2026-08-23 23:18 ／ <code>build_dashboard.py</code>（オーナー: AOD）</div>
+    <div class="sub">生成: 2026-08-23 23:51 ／ <code>build_dashboard.py</code>（オーナー: AOD）</div>
   </header>
 
   <h2>1 ／ 全社横断</h2>
   <div class="kpis">
     <div class="kpi"><div class="n">26</div><div class="l">未着手の設計課題（全社）</div></div>
-    <div class="kpi"><div class="n">6 <span style="font-size:1rem;color:var(--muted)">/ 6</span></div><div class="l">課題を抱える部門</div></div>
+    <div class="kpi"><div class="n">6 <span style="font-size:1rem;color:var(--muted)">/ 7</span></div><div class="l">課題を抱える部門</div></div>
     <div class="kpi"><div class="n">4</div><div class="l">進行中の工程（誰か待ち）</div></div>
   </div>
   <div class="cards" style="margin-top:10px">
+      <a class="card" href="#CAO">
+        <div class="role" style="color:#0f766e">CAO</div>
+        <div class="dept">Holding（CAO）</div>
+        <div class="num">0</div>
+        <div class="unit">未着手</div>
+      </a>
+
       <a class="card has" href="#AOD">
         <div class="role" style="color:#2563eb">AOD</div>
         <div class="dept">Architecture Office</div>
@@ -133,11 +140,11 @@
     <div class="scroll"><table>
       <thead><tr><th>部門</th><th>テーマ</th><th>本質</th></tr></thead>
       <tbody>
+      <tr><td><span class="badge" style="background:#0f766e">CAO</span></td><td>CAOの育成計画の作成と実施</td>
+          <td class="detail">CAO（構想はCAO構想、§3参照）が将来的に他のAI管理職への指示・支援を担う前に、まず自分自身（CAOとして起動するAI）がShunさんの本質・歴史を理解し、CAO自身のナレッジを育てることを優先する。他AIへの指示・支援は現時点では対象外とする。§3「ホールディング副社長AI（CAO）による執行協働レイヤーの確立</td></tr>
+
       <tr><td><span class="badge" style="background:#2563eb">AOD</span></td><td>全AI管理職のミッション・設計思想の明文化</td>
           <td class="detail">全AI管理職に「判断の優先順位に直結する旗印」を持たせ、各管理職が主体的に動ける状態をつくること。抽象度の高いMission文言だけでは足りず、PPDでいう「屋台骨」「Shunさんの状態そのものに責任を持つ」のような具体的な設計思想まで落とす。</td></tr>
-
-      <tr><td><span class="badge" style="background:#2563eb">AOD</span></td><td>CAOの育成計画の作成と実施</td>
-          <td class="detail">CAO（構想はCAO構想、§3参照）が将来的に他のAI管理職への指示・支援を担う前に、まず自分自身（CAOとして起動するAI）がShunさんの本質・歴史を理解し、CAO自身のナレッジを育てることを優先する。他AIへの指示・支援は現時点では対象外とする。§3「ホールディング副社長AI（CAO）による執行協働レイヤーの確立</td></tr>
 
       <tr><td><span class="badge" style="background:#946200">IOD</span></td><td>IOD育成と暗号資産の買い・売り・現金化</td>
           <td class="detail">IODが先、LIMは後。IODが配下を吸収して育ち、今から買えるか・いつ買うか・どう現金化するか・ガチホでよいかを判断できるようにする。</td></tr>
@@ -154,6 +161,11 @@
 
   <h2>3 ／ 部門別バックログ</h2>
   
+      <section id="CAO" class="dept-block">
+        <h3><span class="badge" style="background:#0f766e">CAO</span>Holding（CAO）
+            <small>Executive Deputy</small></h3>
+        <p class='empty'>未着手の設計課題なし</p>
+      </section>
       <section id="AOD" class="dept-block">
         <h3><span class="badge" style="background:#2563eb">AOD</span>Architecture Office
             <small>全社構造設計</small></h3>
