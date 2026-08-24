@@ -75,13 +75,13 @@
 <div class="wrap">
   <header>
     <h1>AI社員会社 ダッシュボード</h1>
-    <div class="sub">生成: 2026-08-24 10:16 ／ <code>build_dashboard.py</code>（オーナー: AOD）</div>
+    <div class="sub">生成: 2026-08-24 10:21 ／ <code>build_dashboard.py</code>（オーナー: AOD）</div>
   </header>
 
   <h2>0 ／ 全社横断</h2>
   <div class="kpis">
-    <div class="kpi"><div class="n">24</div><div class="l">未着手の設計課題（全社）</div></div>
-    <div class="kpi"><div class="n">6 <span style="font-size:1rem;color:var(--muted)">/ 7</span></div><div class="l">課題を抱える部門</div></div>
+    <div class="kpi"><div class="n">27</div><div class="l">未着手の設計課題（全社）</div></div>
+    <div class="kpi"><div class="n">7 <span style="font-size:1rem;color:var(--muted)">/ 7</span></div><div class="l">課題を抱える部門</div></div>
     <div class="kpi"><div class="n">4</div><div class="l">進行中の工程（誰か待ち）</div></div>
   </div>
   <div class="cards" style="margin-top:10px">
@@ -106,10 +106,10 @@
         <div class="unit">未着手</div>
       </a>
 
-      <a class="card" href="#KCS">
+      <a class="card has" href="#KCS">
         <div class="role" style="color:#c2410c">KCS</div>
         <div class="dept">KEI事業</div>
-        <div class="num">0</div>
+        <div class="num">3</div>
         <div class="unit">未着手</div>
       </a>
 
@@ -239,7 +239,17 @@
       <section id="KCS" class="dept-block">
         <h3><span class="badge" style="background:#c2410c">KCS</span>KEI事業
             <small>社長の経営参謀</small></h3>
-        <p class='empty'>未着手の設計課題なし</p>
+        <div class="scroll"><table class="board">
+      <thead><tr><th>課題</th><th>状態</th><th>誰待ち</th><th>何待ち</th></tr></thead>
+      <tbody>
+      <tr><td>MeikoのShengyi材変更モニターとAISS失注回避</td><td>継続監視</td>
+          <td class="who">Shun</td><td class="since">情報更新と失注回避の判断（KCSは参謀として補佐）</td></tr>
+
+      <tr><td>Yamaha 2030年モデル（Mio級）のPCB案件獲得</td><td>継続監視</td>
+          <td class="who">Shun</td><td class="since">商流・ライセンス問題の進展と正式提案の判断</td></tr>
+
+      <tr><td>サーモセッタ存続危機への継続対応</td><td>継続監視</td>
+          <td class="who">Shun</td><td class="since">移管配分と移行設計の判断</td></tr></tbody></table></div>
       </section>
       <section id="IOD" class="dept-block">
         <h3><span class="badge" style="background:#946200">IOD</span>Investment Office
