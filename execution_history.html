@@ -56,14 +56,14 @@
 <div class="wrap">
   <header>
     <h1>全社実行履歴</h1>
-    <div class="sub">生成: 2026-08-30 23:09 ／ <a href="dashboard.html">ダッシュボード</a> ／ <a href="execution_history.html">実行履歴</a> ／ <a href="executive_state.html">いまの焦点</a> ／ 正本は各部門の Execution History</div>
+    <div class="sub">生成: 2026-08-30 23:26 ／ <a href="dashboard.html">ダッシュボード</a> ／ <a href="execution_history.html">実行履歴</a> ／ <a href="executive_state.html">いまの焦点</a> ／ 正本は各部門の Execution History</div>
   </header>
   <div class="kpi"><div class="n">8</div><div class="l">完了した実行（全期間・全社）</div></div>
   <div class="filters"><button type="button" data-role="" class="on">すべて</button><button type="button" data-role="CAO" style="--role:#0f766e">CAO</button><button type="button" data-role="AOD" style="--role:#2563eb">AOD</button><button type="button" data-role="YFD" style="--role:#b91c1c">YFD</button><button type="button" data-role="KCS" style="--role:#c2410c">KCS</button><button type="button" data-role="IOD" style="--role:#946200">IOD</button><button type="button" data-role="PPD" style="--role:#6d28d9">PPD</button><button type="button" data-role="FOD" style="--role:#be185d">FOD</button></div>
   <div class="scroll"><table>
       <thead><tr><th>Date</th><th>Office</th><th>Item</th><th>Description</th>
           <th>Solution</th><th>Status</th></tr></thead>
-      <tbody><tr data-role="AOD"><td class="date">2026-08-30</td><td><span class="badge" style="background:#2563eb">AOD</span></td><td>AssessmentのWeb再読ページ</td><td>Shunが外出先でも8月実績といまの焦点を読み返せるようにする</td><td>実行履歴HTMLの下に前月実績、新ページ executive_state.html（Current Focus以降）。正本は Executive State.md</td><td>完了</td></tr>
+      <tbody><tr data-role="AOD"><td class="date">2026-08-30</td><td><span class="badge" style="background:#2563eb">AOD</span></td><td>AssessmentのWeb再読ページ</td><td>Shunが外出先でも8月実績といまの焦点を読み返せるようにする</td><td>実行履歴HTMLの下に前月実績、新ページ executive_state.html（## Now）。切り口は ## Past / ## Now。正本は Executive State.md</td><td>完了</td></tr>
 <tr data-role="AOD"><td class="date">2026-08-30</td><td><span class="badge" style="background:#2563eb">AOD</span></td><td>会社の現在地View（Shun用とCAO用の分離）</td><td>Shun用ダッシュボードとCAO用Markdownを同じ収集から出す別Viewを実装し、Executive Assessment第一弾まで到達した</td><td>company_state.py から HTML と Company Executive State を生成。Assessment は対話で書き、再生成時に既存本文を残す</td><td>完了</td></tr>
 <tr data-role="CAO"><td class="date">2026-08-29</td><td><span class="badge" style="background:#0f766e">CAO</span></td><td>CAO起動時必読に Company Executive State（会社の現在地View）を追加</td><td>CAOとして立ち上がったとき、まず会社全体の現在と最近の完了実行を読む</td><td>CAO_sop（Chief AI Officer SOP）の起動時必読の先頭へ1行追加</td><td>完了</td></tr>
 <tr data-role="AOD"><td class="date">2026-08-29</td><td><span class="badge" style="background:#2563eb">AOD</span></td><td>EH（Execution History／実行履歴）の当日実装経路</td><td>Board（Progress Board／進捗ボード）に無い実装も、各種文書の更新（Knowledge Flow）時に部門長が候補確認してから履歴へ足す</td><td>共有スキル 01_Knowledge_Flow と 02_部門ボード運用 に二経路を明記</td><td>完了</td></tr>
@@ -78,12 +78,12 @@
 <p>にある。検証すべきは、より良い組織を設計できるかではなく、</p>
 <blockquote><strong>いまのDirector・Knowledge・Board・実行の器が、Shunの価値生産を本当に増やすか</strong></blockquote>
 <p>である。8月は会社を作った月。9月は、その会社を働かせる月になる。</p>
-<h3>8月の実績</h3>
+<h3>Monthly Results｜8月の実績</h3>
 <p>工場が先で、会社が後から追いついた。順序は、YouTube工場 → ホールディングス構想（7日）→ 知識の型（11日、PPD発）→ 権限モデル（12〜14日）→ モバイル入口（17〜20日）→ Office化とIOD二層（21日）→ CAO（22日）→ CLA（24〜25日）→ 活動一次データの構想（27〜28日）。<code>02_Logs</code> の17〜21日が空なのは休暇ではない。仕事は構築ログとBlueprintに着地した。</p>
 <p>出荷（動画公開、投資レビュー、言語学習）は薄い。残ったのは器である。YFDはブランドとサムネ、PPDは全社ナレッジの原型、KCSは週報・予算・メールのパイプライン。市場と身体の出力の手前で止まった。</p>
 <p>PPDは遅れではなく、8月の隠れた主戦場だった。身体の観察が Knowledge Architecture の原型になり、月末には「将来の花形」まで行った。KEIのインタビュー失敗は、総括では発声の問題として自己帰属されている。</p>
 <p>会社の性格が変わった点は四つ。CAOが Stage 1 の副官として対話を始めたこと。Boardに加え EH で「何をしたか」が残るようになったこと。PPDが週次カウンセリングを始めたこと。着帽後に正本が抜けていた問題をCLAとSOP四層（社員SOP／NF／共有スキル／実行環境スキル）に分けたこと。専用Gatewayは作らず、Cowork継続と ChatGPT 等で外出先から戦略・指示が出せるようになった。設備実行はいまもPC側である。</p></div>
-  <footer>完了行は全期間。下の実績は [[Executive State]] の Current Focus より前。手で直さない。</footer>
+  <footer>完了行は全期間。下の実績は Executive State の ## Past。手で直さない。</footer>
 </div>
 <script>
 (function () {
