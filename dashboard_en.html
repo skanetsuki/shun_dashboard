@@ -1,0 +1,330 @@
+<title>AI Company Dashboard</title>
+<style>
+  :root {
+    --bg:#f6f7f9; --panel:#fff; --ink:#16181d; --muted:#6b7280;
+    --line:#e4e7ec; --accent:#2563eb; --warn:#b45309; --ok:#059669;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg:#0f1115; --panel:#171a21; --ink:#e6e8ec; --muted:#9aa3b2;
+      --line:#262b36; --accent:#60a5fa; --warn:#fbbf24; --ok:#34d399;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg:#0f1115; --panel:#171a21; --ink:#e6e8ec; --muted:#9aa3b2;
+    --line:#262b36; --accent:#60a5fa; --warn:#fbbf24; --ok:#34d399;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,"Segoe UI","Yu Gothic UI","Hiragino Sans",sans-serif;
+    line-height:1.65; padding:24px 16px 64px; }
+  .wrap { max-width:1040px; margin:0 auto; }
+  header { margin-bottom:8px; }
+  h1 { font-size:1.5rem; margin:0 0 4px; letter-spacing:.02em; }
+  .sub { color:var(--muted); font-size:.82rem; }
+  .sub a { color:var(--accent); }
+  h2 { font-size:1.15rem; text-transform:uppercase; letter-spacing:.08em;
+    color:var(--muted); margin:36px 0 12px; font-weight:700; }
+  .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; }
+  .kpi { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:14px 16px; }
+  .kpi .n { font-size:1.9rem; font-weight:700; line-height:1.1; }
+  .kpi .l { font-size:.76rem; color:var(--muted); }
+  .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(132px,1fr)); gap:10px; }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:10px;
+    padding:12px 14px; text-decoration:none; color:inherit; display:block; }
+  .card.has { border-color:color-mix(in srgb, var(--accent) 42%, var(--line)); }
+  .card .role { font-size:.72rem; font-weight:700; color:var(--accent); letter-spacing:.06em; }
+  .card .dept { font-size:.8rem; margin-top:1px; }
+  .card .num { font-size:1.7rem; font-weight:700; margin-top:6px; line-height:1; }
+  .card .unit { font-size:.7rem; color:var(--muted); }
+  .dept-block { background:var(--panel); border:1px solid var(--line);
+    border-radius:10px; padding:16px 18px; margin-bottom:10px; }
+  .dept-block h3 { font-size:.98rem; margin:0 0 10px; display:flex;
+    align-items:center; gap:9px; flex-wrap:wrap; }
+  .badge { background:var(--accent); color:#fff; font-size:.68rem; font-weight:700;
+    padding:2px 7px; border-radius:4px; letter-spacing:.05em; }
+  h3 small { color:var(--muted); font-weight:400; font-size:.76rem; }
+  .items { margin:0; padding-left:18px; }
+  .items li { margin-bottom:7px; }
+  .items .t { font-weight:600; font-size:.9rem; }
+  .items .d { display:block; color:var(--muted); font-size:.8rem; }
+  .empty { color:var(--ok); font-size:.84rem; margin:0; }
+  .note { color:var(--muted); font-size:.74rem; margin:6px 0 0; }
+  td.detail { color:var(--ink); }
+  .now { font-size:.86rem; margin:0 0 12px;
+    padding:9px 12px; border-radius:7px; border-left:3px solid var(--accent);
+    background:color-mix(in srgb, var(--accent) 8%, transparent); }
+  .scroll { overflow-x:auto; }
+  table { border-collapse:collapse; width:100%; font-size:.83rem; min-width:480px; }
+  th, td { text-align:left; padding:7px 9px; border-bottom:1px solid var(--line); }
+  th { color:var(--muted); font-weight:600; font-size:.74rem; }
+  td.who { font-weight:600; color:var(--warn); white-space:nowrap; }
+  td.since { color:var(--ink); white-space:nowrap; }
+  table.board { table-layout:fixed; }
+  table.board th, table.board td { word-break:break-word; }
+  table.board th:nth-child(1), table.board td:nth-child(1) { width:38%; }
+  table.board th:nth-child(2), table.board td:nth-child(2) { width:12%; }
+  table.board th:nth-child(3), table.board td:nth-child(3) { width:12%; }
+  table.board th:nth-child(4), table.board td:nth-child(4) { width:38%; }
+  table.board td.who, table.board td.since { white-space:normal; }
+  code { font-size:.74rem; }
+  footer { margin-top:32px; color:var(--muted); font-size:.74rem; }
+  .howto { margin-top:10px; padding:10px 12px; border-radius:8px;
+    border:1px solid var(--line); background:var(--panel); font-size:.78rem; color:var(--muted); }
+  .howto strong { color:var(--ink); font-weight:600; }
+</style>
+<div class="wrap" lang="en">
+  <header>
+    <h1>AI Company Dashboard</h1>
+    <div class="sub">Generated: 2026-08-31 10:26 ／ <a href="dashboard_en.html">Dashboard</a> ／ <a href="execution_history.html">Execution History</a> ／ <a href="executive_state.html">Current Focus</a> ／ <a href="dashboard.html">日本語</a> ／ <code>build_dashboard.py</code> (owner: AOD) ／ Item text stays as written on each Board.</div>
+  </header>
+
+  <h2>0 . Company-wide</h2>
+  <div class="kpis">
+    <div class="kpi"><div class="n">34</div><div class="l">Open design issues (company)</div></div>
+    <div class="kpi"><div class="n">7 <span style="font-size:1rem;color:var(--muted)">/ 7</span></div><div class="l">Offices with issues</div></div>
+    <div class="kpi"><div class="n">4</div><div class="l">In-progress steps (someone waiting)</div></div>
+  </div>
+  <div class="cards" style="margin-top:10px">
+      <a class="card has" href="#CAO">
+        <div class="role" style="color:#0f766e">CAO</div>
+        <div class="dept">Holding (CAO)</div>
+        <div class="num">4</div>
+        <div class="unit">Open</div>
+      </a>
+
+      <a class="card has" href="#AOD">
+        <div class="role" style="color:#2563eb">AOD</div>
+        <div class="dept">Architecture Office</div>
+        <div class="num">4</div>
+        <div class="unit">Open</div>
+      </a>
+
+      <a class="card has" href="#YFD">
+        <div class="role" style="color:#b91c1c">YFD</div>
+        <div class="dept">YouTube</div>
+        <div class="num">12</div>
+        <div class="unit">Open</div>
+      </a>
+
+      <a class="card has" href="#KCS">
+        <div class="role" style="color:#c2410c">KCS</div>
+        <div class="dept">KEI</div>
+        <div class="num">5</div>
+        <div class="unit">Open</div>
+      </a>
+
+      <a class="card has" href="#IOD">
+        <div class="role" style="color:#946200">IOD</div>
+        <div class="dept">Investment Office</div>
+        <div class="num">2</div>
+        <div class="unit">Open</div>
+      </a>
+
+      <a class="card has" href="#PPD">
+        <div class="role" style="color:#6d28d9">PPD</div>
+        <div class="dept">Personal Performance</div>
+        <div class="num">3</div>
+        <div class="unit">Open</div>
+      </a>
+
+      <a class="card has" href="#FOD">
+        <div class="role" style="color:#be185d">FOD</div>
+        <div class="dept">Family Office</div>
+        <div class="num">4</div>
+        <div class="unit">Open</div>
+      </a>
+  </div>
+
+  <h2>1 . Priority themes</h2>
+  <section class="dept-block">
+    <div class="scroll"><table>
+      <thead><tr><th>Office</th><th>Theme</th><th>Essence</th></tr></thead>
+      <tbody>
+      <tr><td><span class="badge" style="background:#2563eb">AOD</span></td><td>VaultにGitを適用し、差分記録を開始する</td>
+          <td class="detail">Vaultの正本差分をGitで機械的に残し、いつ何が変わったかを後から辿れる証跡層を始める。会話履歴や多段蒸留の前に、ファイル差分という一次データを取る。</td></tr>
+
+      <tr><td><span class="badge" style="background:#c2410c">KCS</span></td><td>Family Gathering と日本出張の日程・アポ</td>
+          <td class="detail">KGC中山社長を始め、アポ取りを開始する</td></tr>
+
+      <tr><td><span class="badge" style="background:#946200">IOD</span></td><td>IOD育成と暗号資産の買い・売り・現金化</td>
+          <td class="detail">BTCなどを買い増し条件、売り条件を決めるために、過去分析を行う。うねり取りのデュアル投資実施も検討。</td></tr>
+
+      <tr><td><span class="badge" style="background:#6d28d9">PPD</span></td><td>CEOコンディション・ダッシュボードの構築（健診計画UIと統合）</td>
+          <td class="detail">主観的テレメトリと客観データ（健診・音声・将来のウェアラブル）を統合し、「自分で体を管理している実感」を得られるクールなUI（コックピット）を作る。定義書 §3.4 身体資本層の実務化。</td></tr>
+
+      <tr><td><span class="badge" style="background:#6d28d9">PPD</span></td><td>週次PPDセッションの定例化（主観と客観の統合）</td>
+          <td class="detail">月1回の総括だけでなく、週1〜隔週でPPDとのコーチング/壁打ちを定例化する。その冒頭に「定型文の音声データ計測」を組み込み、客観データ測定と主観的な壁打ちをワンセットで実行する。</td></tr>
+
+      <tr><td><span class="badge" style="background:#6d28d9">PPD</span></td><td>喉を開いて声を出す体の使い方（体軸・脱力・呼吸から）</td>
+          <td class="detail">喉の痛みやすさ・発声の不自由・自信低下を、局所ケアではなく上位（体軸・脱力・呼吸）から「喉から声が出る体の使い方」として作り直す。コミュニケーションの自由度を回復・維持する軸。</td></tr></tbody></table></div>
+  </section>
+
+  <h2>2 . Office backlogs</h2>
+  
+      <section id="CAO" class="dept-block">
+        <h3><span class="badge" style="background:#0f766e">CAO</span>Holding (CAO)
+            <small>Executive Deputy</small></h3>
+        <div class="scroll"><table class="board">
+      <thead><tr><th>Issue</th><th>Status</th><th>Waiting for</th><th>Waiting on</th></tr></thead>
+      <tbody>
+      <tr><td>CAOの育成計画の作成と実施</td><td>Waiting</td>
+          <td class="who">Shun</td><td class="since">育成計画の具体化を再開する指示（いまは組織の稼働実証が先）</td></tr>
+
+      <tr><td>［研究］将来RAGを載せられるKnowledge Architecture</td><td>Research</td>
+          <td class="who">CAO</td><td class="since">導入判断ではない。Ownership／薄いKM契約が先。探索正本をArchitecture要件へ落とすタイミング</td></tr>
+
+      <tr><td>活動一次データの収集と多段蒸留（中長期）</td><td>Waiting</td>
+          <td class="who">Shun</td><td class="since">AODのVault Git差分記録（AOD_Board §1-2）の進捗を見てから、蒸留層の着手指示</td></tr>
+
+      <tr><td>DirectorがPlan→Execute→Reportを自律で回す会社の型</td><td>Not started</td>
+          <td class="who">Shun</td><td class="since">最初の設計範囲（1部門の小さな循環か、全社か）を決める指示</td></tr></tbody></table></div>
+      </section>
+      <section id="AOD" class="dept-block">
+        <h3><span class="badge" style="background:#2563eb">AOD</span>Architecture Office
+            <small>Company architecture</small></h3>
+        <div class="scroll"><table class="board">
+      <thead><tr><th>Issue</th><th>Status</th><th>Waiting for</th><th>Waiting on</th></tr></thead>
+      <tbody>
+      <tr><td>全AI管理職のミッション・設計思想の明文化</td><td>Waiting</td>
+          <td class="who">Shun</td><td class="since">他Directorへの展開判断</td></tr>
+
+      <tr><td>自律起動のリサーチ</td><td>Waiting</td>
+          <td class="who">Shun</td><td class="since">各AI管理職による中期計画提出</td></tr>
+
+      <tr><td>各管理職の中期計画作成</td><td>Waiting</td>
+          <td class="who">Shun</td><td class="since">各AI管理職へのミッション付与</td></tr>
+
+      <tr><td>外部記事（画像込み）のナレッジ保管方法の確立</td><td>Waiting</td>
+          <td class="who">AOD</td><td class="since">次回AOD起動時に着手（Shunさん指示済み）</td></tr></tbody></table></div>
+      </section>
+      <section id="YFD" class="dept-block">
+        <h3><span class="badge" style="background:#b91c1c">YFD</span>YouTube
+            <small>AI video factory</small></h3>
+        <p class='note'>Factory equipment status lives on the pipeline operating note (§11)</p><div class="scroll"><table class="board">
+      <thead><tr><th>Equipment</th><th>Status</th><th>Waiting for</th><th>Waiting on</th></tr></thead>
+      <tbody>
+      <tr><td>Visual Planner 正式運用</td><td>Design in progress</td>
+          <td class="who">-</td><td class="since">Shot境界ルールの確定・SOP化</td></tr>
+
+      <tr><td>Image Selector 育成ループ</td><td>In operation（HOOKのみ）</td>
+          <td class="who">-</td><td class="since">他パートへの展開判断</td></tr>
+
+      <tr><td>validate_scene.py</td><td>未実装</td>
+          <td class="who">-</td><td class="since">build_scene.py のLegacy化とセットで着手</td></tr>
+
+      <tr><td>build_scene.py のLegacy化</td><td>Not started</td>
+          <td class="who">-</td><td class="since">validate_scene.py 実装とセットで進める</td></tr>
+
+      <tr><td>新パイプラインの最終文書化</td><td>Not started</td>
+          <td class="who">-</td><td class="since">着手可（2026-08-14・動画2クローズ済み）</td></tr>
+
+      <tr><td>gate_log.json（ゲート記録の機械可読化）</td><td>On hold</td>
+          <td class="who">-</td><td class="since">再検討のきっかけ（未定）</td></tr>
+
+      <tr><td>generate_audio.py 純化</td><td>Not started</td>
+          <td class="who">-</td><td class="since">プロジェクト非依存化の設計着手</td></tr>
+
+      <tr><td>images/selected/</td><td>未導入</td>
+          <td class="who">-</td><td class="since">candidates運用で不足が出たら</td></tr>
+
+      <tr><td>render_video.py --part</td><td>未実装（代替あり）</td>
+          <td class="who">-</td><td class="since">render_sections.py --onlyで不足が出たら</td></tr>
+
+      <tr><td>Envato 等 有料素材ライン</td><td>Not started</td>
+          <td class="who">-</td><td class="since">無料API系1本通電後の判断</td></tr>
+
+      <tr><td>辞書更新→反映の自動組み込み</td><td>見送り中</td>
+          <td class="who">-</td><td class="since">手動運用が負担になったら再検討</td></tr>
+
+      <tr><td>thumbnailer（最小合成設備）</td><td>未実装</td>
+          <td class="who">TD</td><td class="since">動画2通電で合成手順が固まったら正式化</td></tr></tbody></table></div>
+      </section>
+      <section id="KCS" class="dept-block">
+        <h3><span class="badge" style="background:#c2410c">KCS</span>KEI
+            <small>CEO&#x27;s chief of staff</small></h3>
+        <div class="scroll"><table class="board">
+      <thead><tr><th>Issue</th><th>Status</th><th>Waiting for</th><th>Waiting on</th></tr></thead>
+      <tbody>
+      <tr><td>Outlook操作とAIによるメール自動作成機能の実装</td><td>Not started</td>
+          <td class="who">Shun</td><td class="since">対象メールの型を絞った下書き起案の設計</td></tr>
+
+      <tr><td>MeikoのShengyi材変更モニターとAISS失注回避</td><td>継続監視</td>
+          <td class="who">Shun</td><td class="since">情報更新と失注回避の判断（KCSは参謀として補佐）</td></tr>
+
+      <tr><td>Yamaha 2030年モデル（Mio級）のPCB案件獲得</td><td>継続監視</td>
+          <td class="who">Shun</td><td class="since">商流・ライセンス問題の進展と正式提案の判断</td></tr>
+
+      <tr><td>サーモセッタ存続危機への継続対応</td><td>継続監視</td>
+          <td class="who">Shun</td><td class="since">移管配分と移行設計の判断</td></tr>
+
+      <tr><td>KEI倉庫の火災対策（設備実装と保険確認）</td><td>Not started</td>
+          <td class="who">Shun</td><td class="since">ビル会社との協議開始、保険証券・補償範囲の確認</td></tr></tbody></table></div>
+      </section>
+      <section id="IOD" class="dept-block">
+        <h3><span class="badge" style="background:#946200">IOD</span>Investment Office
+            <small>Capital allocation and exit</small></h3>
+        <div class="scroll"><table class="board">
+      <thead><tr><th>Issue</th><th>Status</th><th>Waiting for</th><th>Waiting on</th></tr></thead>
+      <tbody>
+      <tr><td>Sayang承継の資産側Knowledge</td><td>On hold</td>
+          <td class="who">Shun</td><td class="since">着手指示（FODと同時起動）</td></tr>
+
+      <tr><td>FX短期売買AIエージェントの新設（STM）</td><td>On hold</td>
+          <td class="who">IOD</td><td class="since">IOD自身の育成が進み、STMへ委任できる状態になること</td></tr></tbody></table></div>
+      </section>
+      <section id="PPD" class="dept-block">
+        <h3><span class="badge" style="background:#6d28d9">PPD</span>Personal Performance
+            <small>Body, mind, energy</small></h3>
+        <div class="scroll"><table class="board">
+      <thead><tr><th>Issue</th><th>Status</th><th>Waiting for</th><th>Waiting on</th></tr></thead>
+      <tbody>
+      <tr><td>自動計測（睡眠の質等）とモニタリング経路の実装</td><td>On hold</td>
+          <td class="who">Shun＋AOD</td><td class="since">スマートリング購入後、自動計測を開始する</td></tr>
+
+      <tr><td>生活習慣・健診数値の記録・蓄積の設計</td><td>On hold</td>
+          <td class="who">Shun</td><td class="since">「計測とモニタリング経路の実装」の確定（どんなデータが入ってくるかが決まってから）</td></tr>
+
+      <tr><td>学習Stockの受け皿がない（睡眠、アンチエイジング等）</td><td>On hold</td>
+          <td class="who">Shun</td><td class="since">関心テーマの表明（睡眠、アンチエイジング等）</td></tr></tbody></table></div>
+      </section>
+      <section id="FOD" class="dept-block">
+        <h3><span class="badge" style="background:#be185d">FOD</span>Family Office
+            <small>Education, relatives, home</small></h3>
+        <div class="scroll"><table class="board">
+      <thead><tr><th>Issue</th><th>Status</th><th>Waiting for</th><th>Waiting on</th></tr></thead>
+      <tbody>
+      <tr><td>Yusuke教育：2歳からの体験型教育・英語環境の立ち上げ</td><td>Waiting</td>
+          <td class="who">Shun</td><td class="since">再開指示（9月は他領域優先）</td></tr>
+
+      <tr><td>意思決定支援AI社員：運用設計と過去事例の棚卸し</td><td>Waiting</td>
+          <td class="who">FOD</td><td class="since">CAO配下PSEP（問題解決探索プロジェクト｜全体構想書）での型探索との接続整理、および最初の実案件（買い物・予約）での設計判断</td></tr>
+
+      <tr><td>Yusukeプレスクール調査ノートの正本化</td><td>Waiting</td>
+          <td class="who">FOD</td><td class="since">2026-08-22 Cowork提示済みの候補リスト・訪問計画を 01_Family/10_Education/ へ調査ノート化する作業（本セッションでは候補本文がVaultに無い）</td></tr>
+
+      <tr><td>Sayang承継AIの実運用</td><td>Waiting</td>
+          <td class="who">Shun</td><td class="since">着手指示（即時着手しない）</td></tr></tbody></table></div>
+      </section>
+
+  <h2>3 . Active workstreams</h2>
+  
+      <section class="dept-block">
+        <h3>動画2_進捗ボード</h3>
+        <p class="now">TD（2026-08-18）。 主役は scarab_02 採用。thumbnailer 5案（A〜E）生成済み。次は自己QA→Shun提示（完了待ちはしない）。</p>
+        <div class="scroll"><table class="board">
+      <thead><tr><th>Step</th><th>Status</th><th>Waiting for</th><th>Since</th></tr></thead>
+      <tbody>
+      <tr><td>宿題: 閉じ鍵括弧の間の判断基準すり合わせ→SOP昇華</td><td>Not started</td>
+          <td class="who">Shun＋SD</td><td class="since">別途（動画2完了に紐づかない継続課題）</td></tr>
+
+      <tr><td>その通り。（scene_037）の抑揚改善</td><td>Not started</td>
+          <td class="who">Voice QA</td><td class="since">抑揚の具体適用が実装され次第</td></tr>
+
+      <tr><td>サムネ目視GO（採択）</td><td>Not started</td>
+          <td class="who">Shun</td><td class="since">TD提示後</td></tr>
+
+      <tr><td>公開パッケージ残り（タイトル／説明／エンドカード）</td><td>Not started</td>
+          <td class="who">YFD</td><td class="since">サムネGOと並行可（TD分担は初期運用後レビュー）</td></tr></tbody></table></div>
+      </section>
+</div>
