@@ -76,7 +76,7 @@
 <div class="wrap" lang="en">
   <header>
     <h1>AI Company Dashboard</h1>
-    <div class="sub">Generated: 2026-09-06 22:36 ／ <a href="dashboard_en.html">Dashboard</a> ／ <a href="execution_history.html">Execution History</a> ／ <a href="executive_state.html">Current Focus</a> ／ <a href="dashboard.html">日本語</a> ／ <code>build_dashboard.py</code> (owner: AOD) ／ Display is translated. Japanese Boards are the source.</div>
+    <div class="sub">Generated: 2026-09-07 08:43 ／ <a href="dashboard_en.html">Dashboard</a> ／ <a href="execution_history.html">Execution History</a> ／ <a href="executive_state.html">Current Focus</a> ／ <a href="dashboard.html">日本語</a> ／ <code>build_dashboard.py</code> (owner: AOD) ／ Display is translated. Japanese Boards are the source.</div>
   </header>
 
   <h2>0 . Company-wide</h2>
@@ -86,6 +86,13 @@
     <div class="kpi"><div class="n">4</div><div class="l">In-progress steps (someone waiting)</div></div>
   </div>
   <div class="cards" style="margin-top:10px">
+      <a class="card has" href="#PPD">
+        <div class="role" style="color:#6d28d9">PPD</div>
+        <div class="dept">Personal Performance</div>
+        <div class="num">10</div>
+        <div class="unit">Open</div>
+      </a>
+
       <a class="card has" href="#CAO">
         <div class="role" style="color:#0f766e">CAO</div>
         <div class="dept">Holding (CAO)</div>
@@ -96,7 +103,7 @@
       <a class="card has" href="#AOD">
         <div class="role" style="color:#2563eb">AOD</div>
         <div class="dept">Architecture Office</div>
-        <div class="num">4</div>
+        <div class="num">5</div>
         <div class="unit">Open</div>
       </a>
 
@@ -110,7 +117,7 @@
       <a class="card has" href="#KCS">
         <div class="role" style="color:#c2410c">KCS</div>
         <div class="dept">KEI</div>
-        <div class="num">5</div>
+        <div class="num">4</div>
         <div class="unit">Open</div>
       </a>
 
@@ -118,13 +125,6 @@
         <div class="role" style="color:#946200">IOD</div>
         <div class="dept">Investment Office</div>
         <div class="num">2</div>
-        <div class="unit">Open</div>
-      </a>
-
-      <a class="card has" href="#PPD">
-        <div class="role" style="color:#6d28d9">PPD</div>
-        <div class="dept">Personal Performance</div>
-        <div class="num">10</div>
         <div class="unit">Open</div>
       </a>
 
@@ -141,15 +141,6 @@
     <div class="scroll"><table>
       <thead><tr><th>Office</th><th>Theme</th><th>Essence</th></tr></thead>
       <tbody>
-      <tr><td><span class="badge" style="background:#2563eb">AOD</span></td><td>Apply Git to Vault and start differential recording</td>
-          <td class="detail">We will mechanically record the differences between the original Vault files using Git, and create a trail layer that will allow us to track what changed and when. Before performing conversation history and multi-stage distillation, we collect primary data called file differences.</td></tr>
-
-      <tr><td><span class="badge" style="background:#c2410c">KCS</span></td><td>Family Gathering and business trip dates and appointments in Japan</td>
-          <td class="detail">Start making appointments with KGC President Nakayama and others</td></tr>
-
-      <tr><td><span class="badge" style="background:#946200">IOD</span></td><td>IOD development and buying, selling, and converting crypto assets into cash</td>
-          <td class="detail">Perform past analysis to determine conditions for additional purchases and sales of BTC etc. We are also considering implementing dual investment to remove the swell.</td></tr>
-
       <tr><td><span class="badge" style="background:#6d28d9">PPD</span></td><td>How to use your body to open your throat and speak (from body axis, weakness, and breathing)</td>
           <td class="detail">We aim to redefine the problems of sore throats, inability to speak, and loss of self-confidence from the perspective of local care (body axis, weakness, breathing) and how to use the body to produce voice from the throat. Check whether the entire pipeline (abdominal movement, flexibility of the upper body, destination of inhaled breath) is passing through, rather than just a partial process (just opening the throat). An axis for restoring and maintaining freedom of communication.</td></tr>
 
@@ -157,11 +148,53 @@
           <td class="detail">Observe how you speak at this moment, just as you are always aware of your everyday experiences. Rather than doing daily voice training, I want to become someone who can observe the body of the voice.</td></tr>
 
       <tr><td><span class="badge" style="background:#6d28d9">PPD</span></td><td>Attend speaking training (speaking in the abdominal style)</td>
-          <td class="detail">Make the outside lessons for speaking in the abdominal style the axis of 1-1 (how to use the body) and 1-2 (daily monitoring). Reserved. About 8 times in total. Budget: approximately 100,000 yen.</td></tr></tbody></table></div>
+          <td class="detail">Make the outside lessons for speaking in the abdominal style the axis of 1-1 (how to use the body) and 1-2 (daily monitoring). Reserved. About 8 times in total. Budget: approximately 100,000 yen.</td></tr>
+
+      <tr><td><span class="badge" style="background:#c2410c">KCS</span></td><td>Designing a retirement benefit scheme for Japanese people</td>
+          <td class="detail">Calculate retirement benefits for Japanese people (for example, pension is half of the local regulation). Calculate the impact on the savings plan and OP using the same estimate.</td></tr>
+
+      <tr><td><span class="badge" style="background:#946200">IOD</span></td><td>IOD development and buying, selling, and converting crypto assets into cash</td>
+          <td class="detail">Perform past analysis to determine conditions for additional purchases and sales of BTC etc. We are also considering implementing dual investment to remove the swell.</td></tr></tbody></table></div>
   </section>
 
   <h2>2 . Office backlogs</h2>
   
+      <section id="PPD" class="dept-block">
+        <h3><span class="badge" style="background:#6d28d9">PPD</span>Personal Performance
+            <small>Body, mind, energy</small></h3>
+        <div class="scroll"><table class="board">
+      <thead><tr><th>Issue</th><th>Status</th><th>Waiting for</th><th>Waiting on</th></tr></thead>
+      <tbody>
+      <tr><td>Building CEO condition dashboard (integrated with health checkup plan UI)</td><td>Waiting</td>
+          <td class="who">Shun</td><td class="since">Instructions to start the dashboard (Medical checkup text is Medical-Checkup-Index)</td></tr>
+
+      <tr><td>Regularization of weekly PPD sessions (integration of subjectivity and objective)</td><td>Waiting</td>
+          <td class="who">Shun</td><td class="since">Decision to incorporate regular practice (weekly speaking) and audio measurement at the beginning.</td></tr>
+
+      <tr><td>Daily operation of SpeakActor</td><td>Not started</td>
+          <td class="who">Shun</td><td class="since">Deciding which utterances to use as model playback</td></tr>
+
+      <tr><td>Habit of thinking in a foreign language</td><td>Not started</td>
+          <td class="who">Shun</td><td class="since">At what level of granularity should you start a diary/daily report (a design that does not add too much work)</td></tr>
+
+      <tr><td>Throat examination</td><td>Not started</td>
+          <td class="who">Shun</td><td class="since">Deciding on the date of consultation and hospital</td></tr>
+
+      <tr><td>Improving nasal breathing and mouth breathing during sleep</td><td>Not started</td>
+          <td class="who">Shun</td><td class="since">Start of week 2 and exploration range of mouth breathing</td></tr>
+
+      <tr><td>Rules for Typeless hybrid operation in KEI business</td><td>Not started</td>
+          <td class="who">Shun</td><td class="since">3 Deciding whether to fix the distribution in daily life</td></tr>
+
+      <tr><td>Implementation of automatic measurements (sleep quality, etc.) and monitoring routes</td><td>On hold</td>
+          <td class="who">Shun＋AOD</td><td class="since">Start automatic measurement after purchasing the smart ring</td></tr>
+
+      <tr><td>Design of recording and accumulation of lifestyle habits and health checkup values</td><td>On hold</td>
+          <td class="who">Shun</td><td class="since">Confirmation of “implementation of measurement and monitoring routes” (after determining what data will come in)</td></tr>
+
+      <tr><td>There is no learning stock tray (sleep, anti-aging, etc.)</td><td>On hold</td>
+          <td class="who">Shun</td><td class="since">Expression of interest (sleep, anti-aging, etc.)</td></tr></tbody></table></div>
+      </section>
       <section id="CAO" class="dept-block">
         <h3><span class="badge" style="background:#0f766e">CAO</span>Holding (CAO)
             <small>Executive Deputy</small></h3>
@@ -186,6 +219,9 @@
         <div class="scroll"><table class="board">
       <thead><tr><th>Issue</th><th>Status</th><th>Waiting for</th><th>Waiting on</th></tr></thead>
       <tbody>
+      <tr><td>Apply Git to Vault and start differential recording</td><td>Not started</td>
+          <td class="who">Shun</td><td class="since">Deciding to start differential recording privately (locally or privately remote)</td></tr>
+
       <tr><td>Clarification of mission and design philosophy for all AI managers</td><td>Waiting</td>
           <td class="who">Shun</td><td class="since">Determining deployment to other directors</td></tr>
 
@@ -246,8 +282,8 @@
         <div class="scroll"><table class="board">
       <thead><tr><th>Issue</th><th>Status</th><th>Waiting for</th><th>Waiting on</th></tr></thead>
       <tbody>
-      <tr><td>Implementation of automatic email creation function using Outlook operations and AI</td><td>Not started</td>
-          <td class="who">Shun</td><td class="since">Designing a draft that narrows down the target email type</td></tr>
+      <tr><td>Family Gathering and business trip dates and appointments in Japan</td><td>Not started</td>
+          <td class="who">Shun</td><td class="since">President Nakayama and others begin appointments on the Japanese side</td></tr>
 
       <tr><td>Meiko&#x27;s Shengyi material change monitor and AISS order loss avoidance</td><td>Ongoing watch</td>
           <td class="who">Shun</td><td class="since">Update information and make decisions to avoid losing orders (KCS assists as staff)</td></tr>
@@ -256,10 +292,7 @@
           <td class="who">Shun</td><td class="since">Progress in commercial distribution/licensing issues and decision on formal proposal</td></tr>
 
       <tr><td>Continuing response to thermosetter survival crisis</td><td>Ongoing watch</td>
-          <td class="who">Shun</td><td class="since">Determining transfer allocation and migration design</td></tr>
-
-      <tr><td>Fire countermeasures for KEI warehouse (equipment implementation and insurance confirmation)</td><td>Not started</td>
-          <td class="who">Shun</td><td class="since">Start discussions with building company, confirm insurance policy and coverage</td></tr></tbody></table></div>
+          <td class="who">Shun</td><td class="since">Determining transfer allocation and migration design</td></tr></tbody></table></div>
       </section>
       <section id="IOD" class="dept-block">
         <h3><span class="badge" style="background:#946200">IOD</span>Investment Office
@@ -272,42 +305,6 @@
 
       <tr><td>New establishment of FX short-term trading AI agent (STM)</td><td>On hold</td>
           <td class="who">IOD</td><td class="since">IOD has progressed in its own development and is in a state where it can be delegated to STM.</td></tr></tbody></table></div>
-      </section>
-      <section id="PPD" class="dept-block">
-        <h3><span class="badge" style="background:#6d28d9">PPD</span>Personal Performance
-            <small>Body, mind, energy</small></h3>
-        <div class="scroll"><table class="board">
-      <thead><tr><th>Issue</th><th>Status</th><th>Waiting for</th><th>Waiting on</th></tr></thead>
-      <tbody>
-      <tr><td>Building CEO condition dashboard (integrated with health checkup plan UI)</td><td>Waiting</td>
-          <td class="who">Shun</td><td class="since">Instructions to start the dashboard (Medical checkup text is Medical-Checkup-Index)</td></tr>
-
-      <tr><td>Regularization of weekly PPD sessions (integration of subjectivity and objective)</td><td>Waiting</td>
-          <td class="who">Shun</td><td class="since">Decision to incorporate regular practice (weekly speaking) and audio measurement at the beginning.</td></tr>
-
-      <tr><td>Daily operation of SpeakActor</td><td>Not started</td>
-          <td class="who">Shun</td><td class="since">Deciding which utterances to use as model playback</td></tr>
-
-      <tr><td>Habit of thinking in a foreign language</td><td>Not started</td>
-          <td class="who">Shun</td><td class="since">At what level of granularity should you start a diary/daily report (a design that does not add too much work)</td></tr>
-
-      <tr><td>Throat examination</td><td>Not started</td>
-          <td class="who">Shun</td><td class="since">Deciding on the date of consultation and hospital</td></tr>
-
-      <tr><td>Improving nasal breathing and mouth breathing during sleep</td><td>Not started</td>
-          <td class="who">Shun</td><td class="since">Start of week 2 and exploration range of mouth breathing</td></tr>
-
-      <tr><td>Rules for Typeless hybrid operation in KEI business</td><td>Not started</td>
-          <td class="who">Shun</td><td class="since">3 Deciding whether to fix the distribution in daily life</td></tr>
-
-      <tr><td>Implementation of automatic measurements (sleep quality, etc.) and monitoring routes</td><td>On hold</td>
-          <td class="who">Shun＋AOD</td><td class="since">Start automatic measurement after purchasing the smart ring</td></tr>
-
-      <tr><td>Design of recording and accumulation of lifestyle habits and health checkup values</td><td>On hold</td>
-          <td class="who">Shun</td><td class="since">Confirmation of “implementation of measurement and monitoring routes” (after determining what data will come in)</td></tr>
-
-      <tr><td>There is no learning stock tray (sleep, anti-aging, etc.)</td><td>On hold</td>
-          <td class="who">Shun</td><td class="since">Expression of interest (sleep, anti-aging, etc.)</td></tr></tbody></table></div>
       </section>
       <section id="FOD" class="dept-block">
         <h3><span class="badge" style="background:#be185d">FOD</span>Family Office
