@@ -56,14 +56,15 @@
 <div class="wrap">
   <header>
     <h1>全社実行履歴</h1>
-    <div class="sub">生成: 2026-09-12 18:37 ／ <a href="dashboard.html">ダッシュボード</a> ／ <a href="execution_history.html">実行履歴</a> ／ <a href="executive_state.html">いまの焦点</a> ／ <a href="dashboard_en.html">English</a> ／ 正本は各部門の Execution History</div>
+    <div class="sub">生成: 2026-09-12 18:52 ／ <a href="dashboard.html">ダッシュボード</a> ／ <a href="execution_history.html">実行履歴</a> ／ <a href="executive_state.html">いまの焦点</a> ／ <a href="dashboard_en.html">English</a> ／ 正本は各部門の Execution History</div>
   </header>
-  <div class="kpi"><div class="n">38</div><div class="l">完了した実行（全期間・全社）</div></div>
+  <div class="kpi"><div class="n">39</div><div class="l">完了した実行（全期間・全社）</div></div>
   <div class="filters"><button type="button" data-role="" class="on">すべて</button><button type="button" data-role="PPD" style="--role:#6d28d9">PPD</button><button type="button" data-role="CAO" style="--role:#0f766e">CAO</button><button type="button" data-role="AOD" style="--role:#2563eb">AOD</button><button type="button" data-role="YFD" style="--role:#b91c1c">YFD</button><button type="button" data-role="KCS" style="--role:#c2410c">KCS</button><button type="button" data-role="IOD" style="--role:#946200">IOD</button><button type="button" data-role="FOD" style="--role:#be185d">FOD</button></div>
   <div class="scroll"><table>
       <thead><tr><th>Date</th><th>Office</th><th>Item</th><th>Description</th>
           <th>Solution</th><th>Status</th></tr></thead>
-      <tbody><tr data-role="YFD"><td class="date">2026-09-12</td><td><span class="badge" style="background:#b91c1c">YFD</span></td><td>企画工程v3の正本反映</td><td>上流を①拡散／②収束／③SWの3工程に固定。構成設計書＝SWハンドオフ。別の引き継ぎ書は作らない</td><td>運用正本§3・§7.0.3を書き換え、SW引き渡しテンプレを削除。YFD SOP・SW定義／SOPを追随</td><td>完了</td></tr>
+      <tbody><tr data-role="YFD"><td class="date">2026-09-12</td><td><span class="badge" style="background:#b91c1c">YFD</span></td><td>Scene生成の設備分離（動画3でレガシー潰し）</td><td>build_scene.py 経由の過渡期契約のまま動画3を通すと負債が残る</td><td>validate_scene.py をパイプライン共通へ設置。SD指示・運用正本§3/§4/§8.2・SD SOPを「scene.json直書き」へ更新。build_scene.py は動画2遺物。SD実行は新規セッション</td><td>完了（設備と契約）。初適用は動画3のSD待ち</td></tr>
+<tr data-role="YFD"><td class="date">2026-09-12</td><td><span class="badge" style="background:#b91c1c">YFD</span></td><td>企画工程v3の正本反映</td><td>上流を①拡散／②収束／③SWの3工程に固定。構成設計書＝SWハンドオフ。別の引き継ぎ書は作らない</td><td>運用正本§3・§7.0.3を書き換え、SW引き渡しテンプレを削除。YFD SOP・SW定義／SOPを追随</td><td>完了</td></tr>
 <tr data-role="YFD"><td class="date">2026-09-12</td><td><span class="badge" style="background:#b91c1c">YFD</span></td><td>企画形成パイプラインの標準化</td><td>動画3の壁打ち／構成設計を工場工程にした。要約で原会話を置換しない</td><td>当初テンプレ3種で接続したのち、同日 v3 で2成果物へ訂正（次行）</td><td>完了</td></tr>
 <tr data-role="YFD"><td class="date">2026-09-12</td><td><span class="badge" style="background:#b91c1c">YFD</span></td><td>動画3台本確定稿</td><td>Ownerが Haku_Pro ver.1.7 を確定稿とした。企画・壁打ち・改訂稿は 企画・台本/ に集約</td><td>正本は Haku_Pro_幽霊になる台本（確定稿）ver.1.7.md。次工程は Scene Director</td><td>完了</td></tr>
 <tr data-role="YFD"><td class="date">2026-09-12</td><td><span class="badge" style="background:#b91c1c">YFD</span></td><td>工場負債ボード（運用正本§11）の整理</td><td>未実装表に実装済み・見送り・互い待ちの循環が残り、誰待ちが空欄だった</td><td>validate_scene と build_scene Legacy化を1行に統合（誰待ちYFD／動画3のSD通し後）。最終文書化は企画形成完了として閉じ、残差は設備分離へ吸収。uploaderは実装済みへ。条件待ち5件はYFD Board §3へ</td><td>完了</td></tr>

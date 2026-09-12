@@ -76,7 +76,7 @@
 <div class="wrap" lang="en">
   <header>
     <h1>AI Company Dashboard</h1>
-    <div class="sub">Generated: 2026-09-12 18:37 ／ <a href="dashboard_en.html">Dashboard</a> ／ <a href="execution_history.html">Execution History</a> ／ <a href="executive_state.html">Current Focus</a> ／ <a href="dashboard.html">日本語</a> ／ <code>build_dashboard.py</code> (owner: AOD) ／ Display is translated. Japanese Boards are the source.</div>
+    <div class="sub">Generated: 2026-09-12 18:52 ／ <a href="dashboard_en.html">Dashboard</a> ／ <a href="execution_history.html">Execution History</a> ／ <a href="executive_state.html">Current Focus</a> ／ <a href="dashboard.html">日本語</a> ／ <code>build_dashboard.py</code> (owner: AOD) ／ Display is translated. Japanese Boards are the source.</div>
   </header>
 
   <h2>0 . Company-wide</h2>
@@ -240,17 +240,17 @@
         <p class='note'>Factory equipment status lives on the pipeline operating note (§11)</p><div class="scroll"><table class="board">
       <thead><tr><th>Equipment</th><th>Status</th><th>Waiting for</th><th>Waiting on</th></tr></thead>
       <tbody>
-      <tr><td>Scene生成の設備分離（validate_scene.py ＋ build_scene.py Legacy化）</td><td>Not started</td>
-          <td class="who">YFD</td><td class="since">動画3で Scene Director が現行経路（build_scene.py）を一度通したあと</td></tr>
+      <tr><td>Scene generation equipment separation (validate_scene.py + build_scene.py Legacy)</td><td>in progress</td>
+          <td class="who">Scene Director</td><td class="since">In video 3, write scene.json directly and pass validate_scene.py</td></tr>
 
       <tr><td>generate_audio.py purification</td><td>Not started</td>
-          <td class="who">YFD</td><td class="since">動画3の音声ラインを現行のまま通したあと</td></tr>
+          <td class="who">YFD</td><td class="since">After passing the audio line in video 3 as it is now</td></tr>
 
       <tr><td>Visual Planner official operation</td><td>Design in progress</td>
-          <td class="who">YFD</td><td class="since">動画3で本編映像工程に入ったとき</td></tr>
+          <td class="who">YFD</td><td class="since">When the main video process started in video 3</td></tr>
 
       <tr><td>Image Selector training loop</td><td>In operation (HOOK only)</td>
-          <td class="who">YFD</td><td class="since">動画3で本編映像工程に入ったとき</td></tr></tbody></table></div>
+          <td class="who">YFD</td><td class="since">When the main video process started in video 3</td></tr></tbody></table></div>
       </section>
       <section id="KCS" class="dept-block">
         <h3><span class="badge" style="background:#c2410c">KCS</span>KEI
@@ -310,11 +310,11 @@
       </section>
       <section class="dept-block">
         <h3>Video 3_Progress board</h3>
-        <p class="now">The final script is Haku_Pro_Ghost Script (final draft) ver.1.7.md. Planning materials are planning/script/. Next is Scene Director.</p>
+        <p class="now">The final script is Haku_Pro_Ghost Script (final draft) ver.1.7.md. Next is Scene Director. Write scene.json directly (do not use build_scene.py).</p>
         <div class="scroll"><table class="board">
       <thead><tr><th>Step</th><th>Status</th><th>Waiting for</th><th>Since</th></tr></thead>
       <tbody>
       <tr><td>Scene Director（scene.json）</td><td>Not started</td>
-          <td class="who">YFD</td><td class="since">2026-09-12</td></tr></tbody></table></div>
+          <td class="who">Scene Director</td><td class="since">2026-09-12</td></tr></tbody></table></div>
       </section>
 </div>
