@@ -76,12 +76,12 @@
 <div class="wrap" lang="en">
   <header>
     <h1>AI Company Dashboard</h1>
-    <div class="sub">Generated: 2026-09-12 18:28 ／ <a href="dashboard_en.html">Dashboard</a> ／ <a href="execution_history.html">Execution History</a> ／ <a href="executive_state.html">Current Focus</a> ／ <a href="dashboard.html">日本語</a> ／ <code>build_dashboard.py</code> (owner: AOD) ／ Display is translated. Japanese Boards are the source.</div>
+    <div class="sub">Generated: 2026-09-12 18:37 ／ <a href="dashboard_en.html">Dashboard</a> ／ <a href="execution_history.html">Execution History</a> ／ <a href="executive_state.html">Current Focus</a> ／ <a href="dashboard.html">日本語</a> ／ <code>build_dashboard.py</code> (owner: AOD) ／ Display is translated. Japanese Boards are the source.</div>
   </header>
 
   <h2>0 . Company-wide</h2>
   <div class="kpis">
-    <div class="kpi"><div class="n">41</div><div class="l">Open design issues (company)</div></div>
+    <div class="kpi"><div class="n">33</div><div class="l">Open design issues (company)</div></div>
     <div class="kpi"><div class="n">7 <span style="font-size:1rem;color:var(--muted)">/ 7</span></div><div class="l">Offices with issues</div></div>
     <div class="kpi"><div class="n">1</div><div class="l">In-progress steps (someone waiting)</div></div>
   </div>
@@ -110,7 +110,7 @@
       <a class="card has" href="#YFD">
         <div class="role" style="color:#b91c1c">YFD</div>
         <div class="dept">YouTube</div>
-        <div class="num">12</div>
+        <div class="num">4</div>
         <div class="unit">Open</div>
       </a>
 
@@ -240,41 +240,17 @@
         <p class='note'>Factory equipment status lives on the pipeline operating note (§11)</p><div class="scroll"><table class="board">
       <thead><tr><th>Equipment</th><th>Status</th><th>Waiting for</th><th>Waiting on</th></tr></thead>
       <tbody>
-      <tr><td>Visual Planner official operation</td><td>Design in progress</td>
-          <td class="who">-</td><td class="since">Finalize shot boundary rules and create SOP</td></tr>
-
-      <tr><td>Image Selector training loop</td><td>In operation (HOOK only)</td>
-          <td class="who">-</td><td class="since">Determining expansion to other parts</td></tr>
-
-      <tr><td>validate_scene.py</td><td>Not implemented</td>
-          <td class="who">-</td><td class="since">Start with legacyization of build_scene.py</td></tr>
-
-      <tr><td>Making build_scene.py Legacy</td><td>Not started</td>
-          <td class="who">-</td><td class="since">Proceed together with validate_scene.py implementation</td></tr>
-
-      <tr><td>Final documentation of the new pipeline</td><td>Not started</td>
-          <td class="who">-</td><td class="since">Ready to start (2026-08-14/Video 2 closed)</td></tr>
-
-      <tr><td>gate_log.json (machine readable gate records)</td><td>On hold</td>
-          <td class="who">-</td><td class="since">Reason for reconsideration (to be determined)</td></tr>
+      <tr><td>Scene生成の設備分離（validate_scene.py ＋ build_scene.py Legacy化）</td><td>Not started</td>
+          <td class="who">YFD</td><td class="since">動画3で Scene Director が現行経路（build_scene.py）を一度通したあと</td></tr>
 
       <tr><td>generate_audio.py purification</td><td>Not started</td>
-          <td class="who">-</td><td class="since">Start designing project independence</td></tr>
+          <td class="who">YFD</td><td class="since">動画3の音声ラインを現行のまま通したあと</td></tr>
 
-      <tr><td>images/selected/</td><td>Not introduced</td>
-          <td class="who">-</td><td class="since">If there is a shortage in candidates operation</td></tr>
+      <tr><td>Visual Planner official operation</td><td>Design in progress</td>
+          <td class="who">YFD</td><td class="since">動画3で本編映像工程に入ったとき</td></tr>
 
-      <tr><td>render_video.py --part</td><td>Not implemented (alternatives available)</td>
-          <td class="who">-</td><td class="since">If something is missing with render_sections.py --only</td></tr>
-
-      <tr><td>Paid material lines such as Envato</td><td>Not started</td>
-          <td class="who">-</td><td class="since">Judgment after energizing one free API system</td></tr>
-
-      <tr><td>Dictionary update → automatic integration of reflection</td><td>Deferred</td>
-          <td class="who">-</td><td class="since">Reconsider if manual operation becomes a burden</td></tr>
-
-      <tr><td>youtube_uploader.py (YouTube posting automation)</td><td>Implemented and operation confirmed (Successfully uploaded on 2026-09-07/Video 2)</td>
-          <td class="who">—</td><td class="since">—</td></tr></tbody></table></div>
+      <tr><td>Image Selector training loop</td><td>In operation (HOOK only)</td>
+          <td class="who">YFD</td><td class="since">動画3で本編映像工程に入ったとき</td></tr></tbody></table></div>
       </section>
       <section id="KCS" class="dept-block">
         <h3><span class="badge" style="background:#c2410c">KCS</span>KEI

@@ -76,12 +76,12 @@
 <div class="wrap" lang="ja">
   <header>
     <h1>AI社員会社 ダッシュボード</h1>
-    <div class="sub">生成: 2026-09-12 18:28 ／ <a href="dashboard.html">ダッシュボード</a> ／ <a href="execution_history.html">実行履歴</a> ／ <a href="executive_state.html">いまの焦点</a> ／ <a href="dashboard_en.html">English</a> ／ <code>build_dashboard.py</code>（オーナー: AOD）</div>
+    <div class="sub">生成: 2026-09-12 18:37 ／ <a href="dashboard.html">ダッシュボード</a> ／ <a href="execution_history.html">実行履歴</a> ／ <a href="executive_state.html">いまの焦点</a> ／ <a href="dashboard_en.html">English</a> ／ <code>build_dashboard.py</code>（オーナー: AOD）</div>
   </header>
 
   <h2>0 . 全社横断</h2>
   <div class="kpis">
-    <div class="kpi"><div class="n">41</div><div class="l">未着手の設計課題（全社）</div></div>
+    <div class="kpi"><div class="n">33</div><div class="l">未着手の設計課題（全社）</div></div>
     <div class="kpi"><div class="n">7 <span style="font-size:1rem;color:var(--muted)">/ 7</span></div><div class="l">課題を抱える部門</div></div>
     <div class="kpi"><div class="n">1</div><div class="l">進行中の工程（誰か待ち）</div></div>
   </div>
@@ -110,7 +110,7 @@
       <a class="card has" href="#YFD">
         <div class="role" style="color:#b91c1c">YFD</div>
         <div class="dept">YouTube事業</div>
-        <div class="num">12</div>
+        <div class="num">4</div>
         <div class="unit">未着手</div>
       </a>
 
@@ -240,41 +240,17 @@
         <p class='note'>設備・工場の状態のため部門正本側（運用正本 §11）</p><div class="scroll"><table class="board">
       <thead><tr><th>設備</th><th>状態</th><th>誰待ち</th><th>何待ち</th></tr></thead>
       <tbody>
-      <tr><td>Visual Planner 正式運用</td><td>継続設計</td>
-          <td class="who">-</td><td class="since">Shot境界ルールの確定・SOP化</td></tr>
-
-      <tr><td>Image Selector 育成ループ</td><td>運用中（HOOKのみ）</td>
-          <td class="who">-</td><td class="since">他パートへの展開判断</td></tr>
-
-      <tr><td>validate_scene.py</td><td>未実装</td>
-          <td class="who">-</td><td class="since">build_scene.py のLegacy化とセットで着手</td></tr>
-
-      <tr><td>build_scene.py のLegacy化</td><td>未着手</td>
-          <td class="who">-</td><td class="since">validate_scene.py 実装とセットで進める</td></tr>
-
-      <tr><td>新パイプラインの最終文書化</td><td>未着手</td>
-          <td class="who">-</td><td class="since">着手可（2026-08-14・動画2クローズ済み）</td></tr>
-
-      <tr><td>gate_log.json（ゲート記録の機械可読化）</td><td>保留</td>
-          <td class="who">-</td><td class="since">再検討のきっかけ（未定）</td></tr>
+      <tr><td>Scene生成の設備分離（validate_scene.py ＋ build_scene.py Legacy化）</td><td>未着手</td>
+          <td class="who">YFD</td><td class="since">動画3で Scene Director が現行経路（build_scene.py）を一度通したあと</td></tr>
 
       <tr><td>generate_audio.py 純化</td><td>未着手</td>
-          <td class="who">-</td><td class="since">プロジェクト非依存化の設計着手</td></tr>
+          <td class="who">YFD</td><td class="since">動画3の音声ラインを現行のまま通したあと</td></tr>
 
-      <tr><td>images/selected/</td><td>未導入</td>
-          <td class="who">-</td><td class="since">candidates運用で不足が出たら</td></tr>
+      <tr><td>Visual Planner 正式運用</td><td>継続設計</td>
+          <td class="who">YFD</td><td class="since">動画3で本編映像工程に入ったとき</td></tr>
 
-      <tr><td>render_video.py --part</td><td>未実装（代替あり）</td>
-          <td class="who">-</td><td class="since">render_sections.py --onlyで不足が出たら</td></tr>
-
-      <tr><td>Envato 等 有料素材ライン</td><td>未着手</td>
-          <td class="who">-</td><td class="since">無料API系1本通電後の判断</td></tr>
-
-      <tr><td>辞書更新→反映の自動組み込み</td><td>見送り中</td>
-          <td class="who">-</td><td class="since">手動運用が負担になったら再検討</td></tr>
-
-      <tr><td>youtube_uploader.py（YouTube投稿自動化）</td><td>実装済み・動作確認済み（2026-09-07・動画2で実アップロード成功）</td>
-          <td class="who">—</td><td class="since">—</td></tr></tbody></table></div>
+      <tr><td>Image Selector 育成ループ</td><td>運用中（HOOKのみ）</td>
+          <td class="who">YFD</td><td class="since">動画3で本編映像工程に入ったとき</td></tr></tbody></table></div>
       </section>
       <section id="KCS" class="dept-block">
         <h3><span class="badge" style="background:#c2410c">KCS</span>KEI事業
