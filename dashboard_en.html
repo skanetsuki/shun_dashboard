@@ -76,7 +76,7 @@
 <div class="wrap" lang="en">
   <header>
     <h1>AI Company Dashboard</h1>
-    <div class="sub">Generated: 2026-09-12 20:25 ／ <a href="dashboard_en.html">Dashboard</a> ／ <a href="execution_history.html">Execution History</a> ／ <a href="executive_state.html">Current Focus</a> ／ <a href="dashboard.html">日本語</a> ／ <code>build_dashboard.py</code> (owner: AOD) ／ Display is translated. Japanese Boards are the source.</div>
+    <div class="sub">Generated: 2026-09-12 20:29 ／ <a href="dashboard_en.html">Dashboard</a> ／ <a href="execution_history.html">Execution History</a> ／ <a href="executive_state.html">Current Focus</a> ／ <a href="dashboard.html">日本語</a> ／ <code>build_dashboard.py</code> (owner: AOD) ／ Display is translated. Japanese Boards are the source.</div>
   </header>
 
   <h2>0 . Company-wide</h2>
@@ -86,6 +86,13 @@
     <div class="kpi"><div class="n">1</div><div class="l">In-progress steps (someone waiting)</div></div>
   </div>
   <div class="cards" style="margin-top:10px">
+      <a class="card has" href="#YFD">
+        <div class="role" style="color:#b91c1c">YFD</div>
+        <div class="dept">YouTube</div>
+        <div class="num">3</div>
+        <div class="unit">Open</div>
+      </a>
+
       <a class="card has" href="#PPD">
         <div class="role" style="color:#6d28d9">PPD</div>
         <div class="dept">Personal Performance</div>
@@ -104,13 +111,6 @@
         <div class="role" style="color:#2563eb">AOD</div>
         <div class="dept">Architecture Office</div>
         <div class="num">5</div>
-        <div class="unit">Open</div>
-      </a>
-
-      <a class="card has" href="#YFD">
-        <div class="role" style="color:#b91c1c">YFD</div>
-        <div class="dept">YouTube</div>
-        <div class="num">3</div>
         <div class="unit">Open</div>
       </a>
 
@@ -156,6 +156,21 @@
 
   <h2>2 . Office backlogs</h2>
   
+      <section id="YFD" class="dept-block">
+        <h3><span class="badge" style="background:#b91c1c">YFD</span>YouTube
+            <small>AI video factory</small></h3>
+        <p class='note'>Factory equipment status lives on the pipeline operating note (§11)</p><div class="scroll"><table class="board">
+      <thead><tr><th>Equipment</th><th>Status</th><th>Waiting for</th><th>Waiting on</th></tr></thead>
+      <tbody>
+      <tr><td>Scene generation equipment separation (validate_scene.py + build_scene.py Legacy)</td><td>in progress</td>
+          <td class="who">Scene Director</td><td class="since">In video 3, write scene.json directly and pass validate_scene.py</td></tr>
+
+      <tr><td>Visual Planner official operation</td><td>Design in progress</td>
+          <td class="who">YFD</td><td class="since">When the main video process started in video 3</td></tr>
+
+      <tr><td>Image Selector training loop</td><td>In operation (HOOK only)</td>
+          <td class="who">YFD</td><td class="since">When the main video process started in video 3</td></tr></tbody></table></div>
+      </section>
       <section id="PPD" class="dept-block">
         <h3><span class="badge" style="background:#6d28d9">PPD</span>Personal Performance
             <small>Body, mind, energy</small></h3>
@@ -221,21 +236,6 @@
 
       <tr><td>Establishing a knowledge storage method for external articles (including images)</td><td>Waiting</td>
           <td class="who">AOD</td><td class="since">Starts the next time AOD is started (Shun-san instructed)</td></tr></tbody></table></div>
-      </section>
-      <section id="YFD" class="dept-block">
-        <h3><span class="badge" style="background:#b91c1c">YFD</span>YouTube
-            <small>AI video factory</small></h3>
-        <p class='note'>Factory equipment status lives on the pipeline operating note (§11)</p><div class="scroll"><table class="board">
-      <thead><tr><th>Equipment</th><th>Status</th><th>Waiting for</th><th>Waiting on</th></tr></thead>
-      <tbody>
-      <tr><td>Scene generation equipment separation (validate_scene.py + build_scene.py Legacy)</td><td>in progress</td>
-          <td class="who">Scene Director</td><td class="since">In video 3, write scene.json directly and pass validate_scene.py</td></tr>
-
-      <tr><td>Visual Planner official operation</td><td>Design in progress</td>
-          <td class="who">YFD</td><td class="since">When the main video process started in video 3</td></tr>
-
-      <tr><td>Image Selector training loop</td><td>In operation (HOOK only)</td>
-          <td class="who">YFD</td><td class="since">When the main video process started in video 3</td></tr></tbody></table></div>
       </section>
       <section id="KCS" class="dept-block">
         <h3><span class="badge" style="background:#c2410c">KCS</span>KEI
