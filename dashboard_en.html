@@ -76,14 +76,14 @@
 <div class="wrap" lang="en">
   <header>
     <h1>AI Company Dashboard</h1>
-    <div class="sub">Generated: 2026-09-12 20:56 ／ <a href="dashboard_en.html">Dashboard</a> ／ <a href="execution_history.html">Execution History</a> ／ <a href="executive_state.html">Current Focus</a> ／ <a href="dashboard.html">日本語</a> ／ <code>build_dashboard.py</code> (owner: AOD) ／ Display is translated. Japanese Boards are the source.</div>
+    <div class="sub">Generated: 2026-09-14 23:52 ／ <a href="dashboard_en.html">Dashboard</a> ／ <a href="execution_history.html">Execution History</a> ／ <a href="executive_state.html">Current Focus</a> ／ <a href="dashboard.html">日本語</a> ／ <code>build_dashboard.py</code> (owner: AOD) ／ Display is translated. Japanese Boards are the source.</div>
   </header>
 
   <h2>0 . Company-wide</h2>
   <div class="kpis">
     <div class="kpi"><div class="n">28</div><div class="l">Open design issues (company)</div></div>
     <div class="kpi"><div class="n">7 <span style="font-size:1rem;color:var(--muted)">/ 7</span></div><div class="l">Offices with issues</div></div>
-    <div class="kpi"><div class="n">1</div><div class="l">In-progress steps (someone waiting)</div></div>
+    <div class="kpi"><div class="n">3</div><div class="l">In-progress steps (someone waiting)</div></div>
   </div>
   <div class="cards" style="margin-top:10px">
       <a class="card has" href="#YFD">
@@ -292,11 +292,17 @@
       </section>
       <section class="dept-block">
         <h3>Video 3_Progress board</h3>
-        <p class="now">耳検品待ち。 絵コンテ下書き（storyboard.json / 54 Shot）は置いた。Pexels はまだ取らない。</p>
+        <p class="now">翌朝の Shot 画像セレクト待ち。 耳検品は社長指示で仮合格。音声再生成＋セクション連結と、Shot 候補のダウンロードを別窓で起動済み。</p>
         <div class="scroll"><table class="board">
       <thead><tr><th>Step</th><th>Status</th><th>Waiting for</th><th>Since</th></tr></thead>
       <tbody>
-      <tr><td>Audio generation (generation + concatenation)</td><td>進行中（wav 97本は確認）</td>
-          <td class="who">Voice QA</td><td class="since">2026-09-12</td></tr></tbody></table></div>
+      <tr><td>Audio generation (generation + concatenation)</td><td>進行中（別窓。全シーン上書き＋全セクション連結）</td>
+          <td class="who">別窓ジョブ</td><td class="since">2026-09-14</td></tr>
+
+      <tr><td>Shot画像ダウンロード（generate_shot_images.py）</td><td>進行中（別窓。全Shot候補）</td>
+          <td class="who">別窓ジョブ</td><td class="since">2026-09-14</td></tr>
+
+      <tr><td>Image Selector（選定）</td><td>Not started</td>
+          <td class="who">Shunさん</td><td class="since">2026-09-14</td></tr></tbody></table></div>
       </section>
 </div>
