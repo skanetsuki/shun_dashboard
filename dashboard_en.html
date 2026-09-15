@@ -76,14 +76,14 @@
 <div class="wrap" lang="en">
   <header>
     <h1>AI Company Dashboard</h1>
-    <div class="sub">Generated: 2026-09-15 23:50 ／ <a href="dashboard_en.html">Dashboard</a> ／ <a href="execution_history.html">Execution History</a> ／ <a href="executive_state.html">Current Focus</a> ／ <a href="dashboard.html">日本語</a> ／ <code>build_dashboard.py</code> (owner: AOD) ／ Display is translated. Japanese Boards are the source.</div>
+    <div class="sub">Generated: 2026-09-15 23:51 ／ <a href="dashboard_en.html">Dashboard</a> ／ <a href="execution_history.html">Execution History</a> ／ <a href="executive_state.html">Current Focus</a> ／ <a href="dashboard.html">日本語</a> ／ <code>build_dashboard.py</code> (owner: AOD) ／ Display is translated. Japanese Boards are the source.</div>
   </header>
 
   <h2>0 . Company-wide</h2>
   <div class="kpis">
     <div class="kpi"><div class="n">28</div><div class="l">Open design issues (company)</div></div>
     <div class="kpi"><div class="n">7 <span style="font-size:1rem;color:var(--muted)">/ 7</span></div><div class="l">Offices with issues</div></div>
-    <div class="kpi"><div class="n">0</div><div class="l">In-progress steps (someone waiting)</div></div>
+    <div class="kpi"><div class="n">1</div><div class="l">In-progress steps (someone waiting)</div></div>
   </div>
   <div class="cards" style="margin-top:10px">
       <a class="card has" href="#YFD">
@@ -293,6 +293,10 @@
       <section class="dept-block">
         <h3>Video 3_Progress board</h3>
         <p class="now">Section rendering in progress. Separate window render_sections.py (all parts). Cursor does not wait. The ear inspection remains tentatively passed.</p>
-        <p class='empty'>No in-progress steps</p>
+        <div class="scroll"><table class="board">
+      <thead><tr><th>Step</th><th>Status</th><th>Waiting for</th><th>Since</th></tr></thead>
+      <tbody>
+      <tr><td>Section render (render_sections.py)</td><td>In progress (separate window. All parts)</td>
+          <td class="who">別窓ジョブ</td><td class="since">2026-09-15</td></tr></tbody></table></div>
       </section>
 </div>
