@@ -56,14 +56,15 @@
 <div class="wrap">
   <header>
     <h1>全社実行履歴</h1>
-    <div class="sub">生成: 2026-09-23 13:14 ／ <a href="dashboard.html">ダッシュボード</a> ／ <a href="execution_history.html">実行履歴</a> ／ <a href="executive_state.html">いまの焦点</a> ／ <a href="dashboard_en.html">English</a> ／ 正本は各部門の Execution History</div>
+    <div class="sub">生成: 2026-09-23 13:25 ／ <a href="dashboard.html">ダッシュボード</a> ／ <a href="execution_history.html">実行履歴</a> ／ <a href="executive_state.html">いまの焦点</a> ／ <a href="dashboard_en.html">English</a> ／ 正本は各部門の Execution History</div>
   </header>
-  <div class="kpi"><div class="n">60</div><div class="l">完了した実行（全期間・全社）</div></div>
+  <div class="kpi"><div class="n">61</div><div class="l">完了した実行（全期間・全社）</div></div>
   <div class="filters"><button type="button" data-role="" class="on">すべて</button><button type="button" data-role="YFD" style="--role:#b91c1c">YFD</button><button type="button" data-role="PPD" style="--role:#6d28d9">PPD</button><button type="button" data-role="CAO" style="--role:#0f766e">CAO</button><button type="button" data-role="AOD" style="--role:#2563eb">AOD</button><button type="button" data-role="KCS" style="--role:#c2410c">KCS</button><button type="button" data-role="IOD" style="--role:#946200">IOD</button><button type="button" data-role="FOD" style="--role:#be185d">FOD</button></div>
   <div class="scroll"><table>
       <thead><tr><th>Date</th><th>Office</th><th>Item</th><th>Description</th>
           <th>Solution</th><th>Status</th></tr></thead>
       <tbody><tr data-role="AOD"><td class="date">2026-09-23</td><td><span class="badge" style="background:#2563eb">AOD</span></td><td>Inbox完了ノートの3分岐移管</td><td>完了ノートがInboxに残り、未了と混ざって認知負荷になっていた</td><td>共有スキルを新設。A＝部門棚＋月ログの薄いアダプタ／B＝月ログ本体／C＝月別Archiveのみ。未了は移さない</td><td>完了</td></tr>
+<tr data-role="AOD"><td class="date">2026-09-23</td><td><span class="badge" style="background:#2563eb">AOD</span></td><td>構築ログ見出しの「〜した日」禁止と遡及改訂</td><td>「〜した日」という出来事・記念日型の表現が連続し、事業OSの進化が見えにくくなっていた</td><td>Knowledge Flow §4.2に見出し基準（名詞・動詞で進化を端的に表す）を追加。構築ログ過去5エントリの見出しを改訂</td><td>完了</td></tr>
 <tr data-role="AOD"><td class="date">2026-09-23</td><td><span class="badge" style="background:#2563eb">AOD</span></td><td>直接編集できない環境の限定差し替え</td><td>スマホ等でBoard／実行履歴を即時更新できず、反映依頼が滞留していた</td><td>削除禁止は維持。退避→差し替え→読み戻しを実行環境マップ§2.1に正式化。通常対象は締め明示時のBoardとEH。制御層は対象と範囲を特定した明示許可のみ</td><td>完了</td></tr>
 <tr data-role="KCS"><td class="date">2026-09-23</td><td><span class="badge" style="background:#c2410c">KCS</span></td><td>Outlook操作とAIによるメール自動作成機能の実装</td><td>WR Forecast週報メールをClaude（Kai）がChromeのOutlookで自動作成（宛先・BCC・本文・添付）し、木曜16:00の予約送信まで実施。以後は毎週の自動タスクに組み込み、送信ボックス投入まで自動化・最終送信判断はShunに残す</td><td>.claude/scheduled-tasks/kei-wr-forecast-update-weekly/SKILL.md（Part B）</td><td>Done</td></tr>
 <tr data-role="IOD"><td class="date">2026-09-22</td><td><span class="badge" style="background:#946200">IOD</span></td><td>BTCUSDT Structure Lab — Closed-candle Snapshot運用</td><td>月足・週足の環境認識を、毎回ゼロから描き直さず、確定足と構造定義の差分だけで継承・更新できる設備へ進化させた。</td><td>snapshot_manager.py、21W EMA / 50W SMA / 200W SMA確認レイヤー、5ページPDF Snapshot、manifest、差分判定テスト5件を追加。全21テストPASS。注文API・自動執行は追加せず、Prototype Research / Shadow / MANUAL_ONLYを維持。</td><td>完了</td></tr>
