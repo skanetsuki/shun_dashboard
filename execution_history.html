@@ -56,14 +56,15 @@
 <div class="wrap">
   <header>
     <h1>全社実行履歴</h1>
-    <div class="sub">生成: 2026-09-23 11:02 ／ <a href="dashboard.html">ダッシュボード</a> ／ <a href="execution_history.html">実行履歴</a> ／ <a href="executive_state.html">いまの焦点</a> ／ <a href="dashboard_en.html">English</a> ／ 正本は各部門の Execution History</div>
+    <div class="sub">生成: 2026-09-23 11:26 ／ <a href="dashboard.html">ダッシュボード</a> ／ <a href="execution_history.html">実行履歴</a> ／ <a href="executive_state.html">いまの焦点</a> ／ <a href="dashboard_en.html">English</a> ／ 正本は各部門の Execution History</div>
   </header>
-  <div class="kpi"><div class="n">58</div><div class="l">完了した実行（全期間・全社）</div></div>
+  <div class="kpi"><div class="n">59</div><div class="l">完了した実行（全期間・全社）</div></div>
   <div class="filters"><button type="button" data-role="" class="on">すべて</button><button type="button" data-role="YFD" style="--role:#b91c1c">YFD</button><button type="button" data-role="PPD" style="--role:#6d28d9">PPD</button><button type="button" data-role="CAO" style="--role:#0f766e">CAO</button><button type="button" data-role="AOD" style="--role:#2563eb">AOD</button><button type="button" data-role="KCS" style="--role:#c2410c">KCS</button><button type="button" data-role="IOD" style="--role:#946200">IOD</button><button type="button" data-role="FOD" style="--role:#be185d">FOD</button></div>
   <div class="scroll"><table>
       <thead><tr><th>Date</th><th>Office</th><th>Item</th><th>Description</th>
           <th>Solution</th><th>Status</th></tr></thead>
-      <tbody><tr data-role="AOD"><td class="date">2026-09-23</td><td><span class="badge" style="background:#2563eb">AOD</span></td><td>直接編集できない環境の限定差し替え</td><td>スマホ等でBoard／実行履歴を即時更新できず、反映依頼が滞留していた</td><td>削除禁止は維持。退避→差し替え→読み戻しを実行環境マップ§2.1に正式化。通常対象は締め明示時のBoardとEH。制御層は対象と範囲を特定した明示許可のみ</td><td>完了</td></tr>
+      <tbody><tr data-role="AOD"><td class="date">2026-09-23</td><td><span class="badge" style="background:#2563eb">AOD</span></td><td>Inbox完了ノートの3分岐移管</td><td>完了ノートがInboxに残り、未了と混ざって認知負荷になっていた</td><td>共有スキルを新設。A＝部門棚＋月ログの薄いアダプタ／B＝月ログ本体／C＝月別Archiveのみ。未了は移さない</td><td>完了</td></tr>
+<tr data-role="AOD"><td class="date">2026-09-23</td><td><span class="badge" style="background:#2563eb">AOD</span></td><td>直接編集できない環境の限定差し替え</td><td>スマホ等でBoard／実行履歴を即時更新できず、反映依頼が滞留していた</td><td>削除禁止は維持。退避→差し替え→読み戻しを実行環境マップ§2.1に正式化。通常対象は締め明示時のBoardとEH。制御層は対象と範囲を特定した明示許可のみ</td><td>完了</td></tr>
 <tr data-role="IOD"><td class="date">2026-09-22</td><td><span class="badge" style="background:#946200">IOD</span></td><td>BTCUSDT Structure Lab — Closed-candle Snapshot運用</td><td>月足・週足の環境認識を、毎回ゼロから描き直さず、確定足と構造定義の差分だけで継承・更新できる設備へ進化させた。</td><td>snapshot_manager.py、21W EMA / 50W SMA / 200W SMA確認レイヤー、5ページPDF Snapshot、manifest、差分判定テスト5件を追加。全21テストPASS。注文API・自動執行は追加せず、Prototype Research / Shadow / MANUAL_ONLYを維持。</td><td>完了</td></tr>
 <tr data-role="IOD"><td class="date">2026-09-22</td><td><span class="badge" style="background:#946200">IOD</span></td><td>手元資金100jutaの配分方針決定</td><td>クリプト追加投入の是非と、マイカー購入資金の優先順位を、IOD×FOD協働で検討</td><td>資産9割超クリプト保有済みのため追加投入の意義は乏しいと判断。マイカー資金（3月ボーナス待ちまたは一部クリプト売却）と兼用させる目的で、手元100jutaはIDR現金（普通預金／短期定期）のまま温存し、追加投入・USDT転換とも見送りと決定。詳細は [[2026-09-22_BTC買い増し判断とマイカー資金の壁打ち]]（02_Logs）。</td><td>決定（実行保留）</td></tr>
 <tr data-role="YFD"><td class="date">2026-09-21</td><td><span class="badge" style="background:#b91c1c">YFD</span></td><td>VNP初回 Architecture 実装</td><td>Pipeline 2.0 の骨格を Vault とコード上に置く。1.0は非破壊</td><td>20_Visual_Narrative_Pipeline/ に運用正本・Role/SOP・schema・選択コピー設備。記録は logs/2026-09-21_VNP_初回Architecture実装.md</td><td>完了（Vertical Slice制作は未着手）</td></tr>
