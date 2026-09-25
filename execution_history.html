@@ -56,15 +56,14 @@
 <div class="wrap">
   <header>
     <h1>全社実行履歴</h1>
-    <div class="sub">生成: 2026-09-25 13:57 ／ <a href="dashboard.html">ダッシュボード</a> ／ <a href="execution_history.html">実行履歴</a> ／ <a href="executive_state.html">いまの焦点</a> ／ <a href="dashboard_en.html">English</a> ／ 正本は各部門の Execution History</div>
+    <div class="sub">生成: 2026-09-25 13:58 ／ <a href="dashboard.html">ダッシュボード</a> ／ <a href="execution_history.html">実行履歴</a> ／ <a href="executive_state.html">いまの焦点</a> ／ <a href="dashboard_en.html">English</a> ／ 正本は各部門の Execution History</div>
   </header>
-  <div class="kpi"><div class="n">66</div><div class="l">完了した実行（全期間・全社）</div></div>
+  <div class="kpi"><div class="n">65</div><div class="l">完了した実行（全期間・全社）</div></div>
   <div class="filters"><button type="button" data-role="" class="on">すべて</button><button type="button" data-role="YFD" style="--role:#b91c1c">YFD</button><button type="button" data-role="PPD" style="--role:#6d28d9">PPD</button><button type="button" data-role="CAO" style="--role:#0f766e">CAO</button><button type="button" data-role="AOD" style="--role:#2563eb">AOD</button><button type="button" data-role="KCS" style="--role:#c2410c">KCS</button><button type="button" data-role="IOD" style="--role:#946200">IOD</button><button type="button" data-role="FOD" style="--role:#be185d">FOD</button></div>
   <div class="scroll"><table>
       <thead><tr><th>Date</th><th>Office</th><th>Item</th><th>Description</th>
           <th>Solution</th><th>Status</th></tr></thead>
       <tbody><tr data-role="KCS"><td class="date">2026-09-25</td><td><span class="badge" style="background:#c2410c">KCS</span></td><td>Outlook仕分けのローカルAI自動化</td><td>ブラウザ操作方式（API消費・時間消費が過大）からの脱却</td><td>ローカルPython（pywin32・クラシックOutlook COM自動化）+ Claude Haiku 4.5構造化出力によるAI分類。確認してから移動の運用で受信トレイ仕分け実施（50通超）</td><td>完了</td></tr>
-<tr data-role="KCS"><td class="date">2026-09-25</td><td><span class="badge" style="background:#c2410c">KCS</span></td><td>Outlook仕分けルールの積み残し解消＋サブフォルダ対応</td><td>§3「アーカイブの扱い」未確定事項を確定（週報→専用フォルダ、Daily sales/DMIA Claim→アーカイブ、DNIA Forecast→1_DENSOサブフォルダ）。運用原則「直下フォルダ限定」を撤回（Copilot時代の制約と判明）</td><td>[[Outlook_整理ルール]]、outlook_classify.py／outlook_move.pyをサブフォルダ移動に対応</td><td>完了</td></tr>
 <tr data-role="IOD"><td class="date">2026-09-24</td><td><span class="badge" style="background:#946200">IOD</span></td><td>初回即時・調整枠の銘柄選定</td><td>新戦略9月始動の初回枠について、投入銘柄を選定した。</td><td>旧Plan 300の残弾埋めではなく、HYPE／Pendleを現時点のThesisと相対強さで再選抜。即時と待機に振り分ける方針で完了。売買執行はShun専権。</td><td>完了</td></tr>
 <tr data-role="AOD"><td class="date">2026-09-23</td><td><span class="badge" style="background:#2563eb">AOD</span></td><td>Cursor外手渡しに拾うRoleを必須化</td><td>反映依頼・Cursor議題がInboxに置かれても、Cursor側で誰が拾うかがファイル名から読めなかった</td><td>ファイル名を YYYY-MM-DD_{RoleID}_。議題テンプレに拾うRole。ルーターは作業対象として渡されたとき明示Activation</td><td>完了</td></tr>
 <tr data-role="AOD"><td class="date">2026-09-23</td><td><span class="badge" style="background:#2563eb">AOD</span></td><td>Inbox完了ノートの3分岐移管</td><td>完了ノートがInboxに残り、未了と混ざって認知負荷になっていた</td><td>共有スキルを新設。A＝部門棚＋月ログの薄いアダプタ／B＝月ログ本体／C＝月別Archiveのみ。未了は移さない</td><td>完了</td></tr>
